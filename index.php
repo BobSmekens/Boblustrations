@@ -11,16 +11,7 @@
 </head>
 <body>
 
-<div class="navbar">
-    <div id="branding"><a href="index.php">BOB | LUSTRATIONS</a></div>
-    <div class="navbar-links">
-        <a href="php/artists.php">artists.</a>
-        <a href="php/artwork.php">artwork.</a>
-        <a href="php/contact.php">contact.</a>
-        <a href="php/login.php">login.</a>
-        <a href="php/cart.php">cart.</a>
-    </div>
-</div>
+<?php include "php/header.php"; ?>
 
 <div class="whitespace"></div>
 
@@ -33,55 +24,14 @@
 <!--                         hot art                 -->
 <div class="hot-art-section">
     <div class="section-title">Hot art this week:</div>
-
     <div class="hot-art-container">
-        <div class="hot-art-card">
-            <img class="hot-art-img" src="img/fredjourdin1.jpg" alt="">
-            <div class="hot-art-text">
-                <div class="hot-art-artist">artist</div>
-                <div class="hot-art-artwork">artwork</div>
-                <div class="hot-art-price">price</div>
-            </div>
-        </div>
-
-        <div class="hot-art-card">
-            <div class="hot-art-img-container">
-                <img class="hot-art-img" src="img/elisacosta3.jpg" alt="">
-            </div>  
-            <div class="hot-art-text">
-                <div class="hot-art-artist">artist</div>
-                <div class="hot-art-artwork">artwork</div>
-                <div class="hot-art-price">price</div>
-            </div>
-        </div>  
-
-        <div class="hot-art-card">
-            <div class="hot-art-img-container">
-                <img class="hot-art-img" src="img/danlaurentiuarcus2.jpg" alt="">
-            </div>  
-            <div class="hot-art-text">
-                <div class="hot-art-artist">artist</div>
-                <div class="hot-art-artwork">artwork</div>
-                <div class="hot-art-price">price</div>
-            </div>
-        </div>  
-
-        <div class="hot-art-card">
-            <div class="hot-art-img-container">
-                <img class="hot-art-img" src="img/fredjourdin3.jpg" alt="">
-            </div>
-            <div class="hot-art-text">
-                <div class="hot-art-artist">artist</div>
-                <div class="hot-art-artwork">artwork</div>
-                <div class="hot-art-price">price</div>
-            </div>
-        </div>  
+        <?php include "php/hotartcard.php"; ?>
     </div>
 </div>
 
 <div class="section-divider-line"></div>
 
-<!--                      artist of the month          -->
+<!--                      artist of the month          
 <div class="monthly-artist-container">
     <div class="monthly-artist-txt">
         <div class="monthly-artist-title">artist of the month</div>
@@ -99,20 +49,27 @@
         <img src="img/monthlyartist1.jpg" alt="">
     </div>
 </div>
-
+-->
+<?php include "php/monthlyartist.php" ?>
 <!--                            newsletter                -->
 <div class="newsletter-banner">
     <div class="newsletter-layover">
         <div class="newsletter-title">Subscribe to newsletter</div>
         <div class="newsletter-txt">Get updates on new art, new artists and discounts</div>
         <div class="newsletter-form">
-            <form action="">
+            
+            <form action="formHandler.php" method="GET">
                 <input id="newsletter-email" type="text" placeholder="subscribe with e-mail">
                 <input id="newsletter-submit" type="submit">
             </form>
+
         </div>
     </div>
 </div>
-    
+
+<div class="footer">
+    <div class="footer-copyright">Copyright &copy Bob Smekens 2019</div>
+</div>   
+
 </body>
 </html>

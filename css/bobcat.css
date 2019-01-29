@@ -34,6 +34,15 @@ body {
 #branding {
     float: left;
     padding: 20px 50px;
+    vertical-align: center;
+    font-size: 20px;
+}
+
+#brandingimg {
+    height: 22px;
+    width: 22px;
+    margin-bottom: -5px;
+    border-radius: 50%;
 }
 
 .navbar-links {
@@ -141,7 +150,7 @@ body {
 }
 
 /*                      HOT ART SECTION             */
-.hot-art-section {
+.hot-art-section, .artwork-section {
     width: 100%;
     margin: auto;
     box-sizing: border-box;
@@ -226,6 +235,17 @@ body {
     position: relative;
 }
 
+.artistpage-container {
+    width: 30%;
+    margin: 50px 20px 0 10px;
+    border: 1px solid black;
+    display: inline-block;
+    height: 600px;
+    vertical-align: top;
+    box-sizing: border-box;
+    position: relative;
+}
+
 .monthly-artist-txt {
     flex: 2;
     text-align: right;
@@ -233,7 +253,22 @@ body {
     color: black;
     align-items: right;
     position: relative;
+    box-sizing: border-box;
 }
+
+.artistpage-txt {
+    padding: 50px 0 0 40px;
+    color: black;
+    align-items: right;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.artistpage-container:nth-of-type(2n) {
+    background-color: #9999ff;
+}
+
+
 
 .monthly-artist-title {
     font-size: 28px;
@@ -248,15 +283,36 @@ body {
     top: 130px;
 }
 
+.artistpage-stripe {
+    border-bottom: 2px solid black;
+    width: 30px;
+    align-self: right;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
 .monthly-artist-name {
     margin-top: 65px;
     font-size: 22px;
+    font-weight: bold;
+}
+
+.artistpage-name {
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .monthly-artist-description {
     margin-top: 20px;
     box-sizing: border-box;
     padding-left: 80px;
+}
+
+.artistpage-description {
+    margin-top: 20px;
+    box-sizing: border-box;
+    width: 80%;
 }
 
 .monthly-artist-link {
@@ -267,50 +323,63 @@ body {
     right: 40px;
 }
 
-.monthly-artist-link:hover {
+.artistpage-link {
+    padding: 15px 25px;
+    border: 2px solid black;
+    margin: 10px 0 10px 0;
+    width: 200px;
+}
+
+.monthly-artist-link:hover, .artistpage-link:hover {
     background-color: black;
     color: white;
     transition: 0.6s ease;
 }
 
-.monthly-artist-img {
+.monthly-artist-img, .artistpage-img {
     flex: 5;
-    height: 100%;
+    width: 100%;
     box-sizing: border-box;
     padding: 15px;
 }
 
 .monthly-artist-img img {
     width: 100%;
+    max-height: 450px;
+}
+
+.artistpage-img img {
+    max-height: 300px;
+    width:100%;
+    min-width: 250px;
 }
 
 @media (max-width: 1000px) {
-    .monthly-artist-container {
+    .monthly-artist-container, .artistpage-container {
         display: block;
     }
 
-    .monthly-artist-txt {
+    .monthly-artist-txt, .artistpage-txt {
         text-align: center;
         width: 100%;
     }
 
-    .monthly-artist-link {
+    .monthly-artist-link, .artistpage-link {
         position: relative;
         width: 40%;
         margin: 130px 0 0 30%;
     }
 
-    .monthly-artist-description {
+    .monthly-artist-description, .artistpage-description {
         display: block;
         padding: none;
     }
 
-    .monthly-artist-stripe {
+    .monthly-artist-stripe, .artistpage-stripe {
         border-bottom: 2px solid black;
         width: 30%;
         margin-right: 34%;
         position: absolute;
-
     }
 }
 
@@ -361,4 +430,91 @@ body {
     border-radius: 4px;
     border: none;
     color: white;
+}
+
+.footer {
+    width: 100%;
+}
+
+.footer-copyright {
+    padding: 20px 0 20px 100px;
+}
+
+/*                               signup form         */
+.signup-container {
+    margin: 150px auto 0 auto;
+    display: flex;
+    width: 70%;
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.signupform-left {
+    flex: 1;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #b3b3ff;
+}
+
+.signup-slogan {
+    margin: 20px;
+    font-size: 24px;
+}
+
+#signup-logo {
+    width: 70%;
+    border-radius: 50%;
+}
+
+.signupform-right {
+    flex: 1;
+    text-align: center;
+    background-color: #9999ff;
+}
+
+.signupform-right input {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 2px;
+    border: none;
+    width: 80%;
+    font-size: 20px;
+    box-sizing: border-box;
+    background-color: #ccccff;
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.signupform-right .signup-title {
+    width: 80%;
+    text-align: center;
+    margin: 40px auto 0 auto;
+    font-size: 32px;
+}
+
+.signupform-right button {
+    width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.artistpage-filter {
+    width: 80%;
+    height: 50px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+#artistpage-filter-style {
+    padding: 5px;
+    font-size: 20px;
+}
+
+#artistpage-search {
+    padding: 5px;
+    font-size: 20px;
 }
