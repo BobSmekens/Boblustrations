@@ -19,7 +19,7 @@
 <div class="landingpage-slider">
     <button id="btn-left" class="slider-btn" onclick="landingpageSliderMinus()">&#8668</button>
     <button id="btn-right" class="slider-btn" onclick="landingpageSliderPlus()">&#8669</button>
-    <div class="slider-artistname">artist name</div>
+    <div class="slider-artistname">Fred Jourdin</div>
 </div>
 
 <!--                         hot art                      -->

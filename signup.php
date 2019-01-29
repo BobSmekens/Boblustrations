@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Signup</title>
@@ -25,11 +26,13 @@
         <div class="signup-title">Signup here</div>
         
         <form action="php/signupHandler.php" method="GET">
+            <i class="fas fa-american-sign-language-interpreting"></i>
             <input type="text" name="client_name" placeholder="Name"><br>
-
+            <i class="fab fa-mailchimp"></i>
             <input type="e-mail" name="client_email" placeholder="E-mail"><br>
 
-            <input type="password" name="client_password" Placeholder="Password"><br>
+            <i class="fas fa-lock"></i>
+            <input type="password" name="client_password" Placeholder='Password'><br>
 
             <button type="submit">Submit</button>
         </form>

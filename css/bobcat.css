@@ -285,10 +285,11 @@ a:hover {
 }
 
 .artistpage-container:nth-of-type(2n) {
-    background-color: #9999ff;
+    background-image: linear-gradient(to bottom right,#9999ff ,#b3b3ff )
 }
 .artistpage-container:nth-of-type(2n-1) {
-    background-color: #b3b3ff;
+    background-image: linear-gradient(to top left,#9999ff ,#b3b3ff )
+
 }
 
 .monthly-artist-title {
@@ -483,6 +484,7 @@ a:hover {
     box-sizing: border-box;
     padding: 20px;
     background-color: #b3b3ff;
+    font-size: 24px;
 }
 
 .signup-slogan {
@@ -499,13 +501,14 @@ a:hover {
     flex: 1;
     text-align: center;
     background-color: #9999ff;
+    font-size: 24px;
 }
 
 .signupform-right input, .signupform-left input {
     display: inline-block;
     margin: 20px;
     padding: 10px 30px 10px 30px;
-    border-radius: 2px;
+    border-radius: 20px;
     border: none;
     width: 80%;
     font-size: 20px;
@@ -547,4 +550,28 @@ a:hover {
     padding: 5px;
     font-size: 20px;
     margin: 10px auto 0 auto;
+}
+
+.singleartist-container {
+    width: 80%;
+    height: 600px;
+    margin: 100px auto 0 auto;
+    text-align: center;
+}
+
+.singleartist-image {
+    width: 49%;
+    margin: auto;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.singleartist-image img {
+    width: 100%;
+}
+
+.singleartist-txt {
+    width: 40%;
+    margin: auto;
+    display: inline-block;
 }
