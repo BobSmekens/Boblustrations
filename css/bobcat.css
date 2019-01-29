@@ -23,12 +23,22 @@ body {
     font-family: 'ZCOOL XiaoWei', serif;
 }
 
+a:hover {
+    color: #9999ff;
+    transition: 0.5s ease;
+}
+
+#scrolltracker {
+    position: absolute;
+    top: 0;
+}
 .navbar {
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 5;
     background-color: white;
+    transition: 0.4s ease;
 }
 
 #branding {
@@ -45,9 +55,13 @@ body {
     border-radius: 50%;
 }
 
+#signup-link, #login-link {
+    padding: 20px 5px;
+}
+
 .navbar-links {
     float: right;
-    padding: 20px 50px;
+    padding: 20px 40px;
     text-transform: capitalize;
     font-weight: 400;
     z-index: 5;
@@ -185,6 +199,12 @@ body {
     width: 24%;
     min-width: 270px;
     background-color: rgba(0,0,0,0);
+    transition: 0.5s ease;
+}
+
+.hot-art-card:hover {
+    transform: scale(1.3);
+    z-index: 5;
 }
 
 .hot-art-img-container {
@@ -267,8 +287,9 @@ body {
 .artistpage-container:nth-of-type(2n) {
     background-color: #9999ff;
 }
-
-
+.artistpage-container:nth-of-type(2n-1) {
+    background-color: #b3b3ff;
+}
 
 .monthly-artist-title {
     font-size: 28px;
@@ -313,6 +334,8 @@ body {
     margin-top: 20px;
     box-sizing: border-box;
     width: 80%;
+    height: 100px;
+    text-overflow: ellipsis;
 }
 
 .monthly-artist-link {
@@ -326,8 +349,14 @@ body {
 .artistpage-link {
     padding: 15px 25px;
     border: 2px solid black;
-    margin: 10px 0 10px 0;
-    width: 200px;
+    margin: 10px auto 10px auto;
+    text-align: center;
+    vertical-align: end;
+    width: 60%;
+    max-width: 150px;
+    position: absolute;
+    bottom: 10px;
+    left: 20%;
 }
 
 .monthly-artist-link:hover, .artistpage-link:hover {
@@ -472,7 +501,7 @@ body {
     background-color: #9999ff;
 }
 
-.signupform-right input {
+.signupform-right input, .signupform-left input {
     display: inline-block;
     margin: 20px;
     padding: 10px 30px 10px 30px;
@@ -485,14 +514,14 @@ body {
     -webkit-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
 }
 
-.signupform-right .signup-title {
+.signupform-right .signup-title, .signupform-left .signup-title {
     width: 80%;
     text-align: center;
     margin: 40px auto 0 auto;
     font-size: 32px;
 }
 
-.signupform-right button {
+.signupform-right button, .signupform-left button {
     width: 200px;
     padding: 10px;
     box-sizing: border-box;
@@ -502,19 +531,20 @@ body {
 }
 
 .artistpage-filter {
-    width: 80%;
+    width: 70%;
     height: 50px;
     margin: 20px auto 0 auto;
     text-align: center;
     padding: 20px;
+    border-bottom: 1px solid black;
 }
 
-#artistpage-filter-style {
-    padding: 5px;
+.artistpage-filter {
     font-size: 20px;
 }
 
-#artistpage-search {
+#artistpage-search, .artistpage-filter-style {
     padding: 5px;
     font-size: 20px;
+    margin: 10px auto 0 auto;
 }

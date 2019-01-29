@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|ZCOOL+XiaoWei" rel="stylesheet">
 </head>
 <body>
-<?php include "modular/footer.php" ?>
+<?php include "php/header.php" ?>
 
 <div class="signup-container">
 

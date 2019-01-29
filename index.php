@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/bobcat.css" />
     <script src="js/bobcat.js"></script>
+    <script src="js/headerup.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|ZCOOL+XiaoWei" rel="stylesheet">
 </head>
 <body>
-
+<div id="scrolltracker"></div>
 <?php include "php/header.php"; ?>
 
 <div class="whitespace"></div>
@@ -21,7 +22,7 @@
     <div class="slider-artistname">artist name</div>
 </div>
 
-<!--                         hot art                 -->
+<!--                         hot art                      -->
 <div class="hot-art-section">
     <div class="section-title">Hot art this week:</div>
     <div class="hot-art-container">
@@ -31,25 +32,8 @@
 
 <div class="section-divider-line"></div>
 
-<!--                      artist of the month          
-<div class="monthly-artist-container">
-    <div class="monthly-artist-txt">
-        <div class="monthly-artist-title">artist of the month</div>
-        <div class="monthly-artist-stripe"></div>
-        <div class="monthly-artist-name">artist name</div>
-        <div class="monthly-artist-description">
-        Blue, well groomed hair hangs over a long, sad face.
-        Narrow silver eyes, set low within their sockets, 
-        watch attentively over the river they've grown 
-        affactionate of for so long.
-        </div>
-        <div class="monthly-artist-link"><a href="">VIEW ARTWORKS</a></div>
-    </div>
-    <div class="monthly-artist-img">
-        <img src="img/monthlyartist1.jpg" alt="">
-    </div>
-</div>
--->
+<!--                      artist of the month             -->        
+
 <?php include "php/monthlyartist.php" ?>
 <!--                            newsletter                -->
 <div class="newsletter-banner">

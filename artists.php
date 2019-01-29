@@ -9,17 +9,25 @@
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|ZCOOL+XiaoWei" rel="stylesheet">
 </head>
 <body>
+<div id="scrolltracker"></div>
+
 <?php include "php/header.php" ?>
 
 <div class="whitespace"></div>
 
-<div class="artistpage-filter debug">
-Filter by:
-    <select name="style" id="artistpage-filter-style">
+<div class="artistpage-filter">
+    <label for="style">Art style: </label>
+    <select name="style" class="artistpage-filter-style">
+        <option value="artist_type_abstract">Abstract</option>
+        <option value="artist_type_realism">Realism</option>
+    </select>
+    <label for="style">Art type: </label>
+    <select name="style" class="artistpage-filter-style">
         <option value="artist_style_paintings">Paintings</option>
         <option value="artist_style_drawings">Drawings</option>
     </select>
-    <input id="artistpage_search" type="search" name="artistpage_search" placeholder="Search">
+    <label for="search"> Artist name: </label>
+    <input id="artistpage-search" type="search" name="artistpage_search" placeholder="Search">
 </div>
 
 <?php include "php/artistcard.php"; ?>

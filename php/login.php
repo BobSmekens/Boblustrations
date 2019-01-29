@@ -18,7 +18,7 @@
     <div class="signupform-left">
         <div class="signup-slogan">Easy art access</div>   
         <img id="signup-logo" src="img/illulogo.png" alt="">
-        <div class="signup-slogan">Is just around the corner</div>
+        <div class="signup-slogan">Is here</div>
     </div>
 
     <div class="signupform-right">
