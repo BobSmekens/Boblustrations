@@ -1,0 +1,364 @@
+/*
+font-family: 'Permanent Marker', cursive;
+font-family: 'ZCOOL XiaoWei', serif;
+*/
+
+html {
+    scroll-behavior: smooth;
+    background-color: #f2f2f2;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+.debug {
+    border: 3px solid red;
+}
+
+* {
+    text-decoration: none;
+    color: #444;
+    font-family: 'ZCOOL XiaoWei', serif;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    background-color: white;
+}
+
+#branding {
+    float: left;
+    padding: 20px 50px;
+}
+
+.navbar-links {
+    float: right;
+    padding: 20px 50px;
+    text-transform: capitalize;
+    font-weight: 400;
+    z-index: 5;
+    background-color: white;
+}
+
+.navbar-links a {
+    padding: 0 50px;
+}
+
+.whitespace {
+    height: 50px;
+    display: block;
+}
+
+@media (max-width: 1100px) {
+    #branding {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-left: -50px;
+    }
+
+    .navbar-links {
+        width: 100%;
+        text-align: center;
+    }
+
+    .whitespace {
+        height: 100px;
+    }
+}
+
+@media (max-width: 857px) {
+    .navbar {
+        position: relative;
+    }
+    
+    #branding {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .navbar-links {
+        width: 100%;
+    }
+    
+    .navbar-links a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+        position: relative;
+    }
+
+    .landingpage-slider {
+        margin-top: 180px;
+    }
+}
+
+.landingpage-slider {
+    height: 600px;
+    transition: 0.5s ease;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    background-image: url("../img/fredjourdin4.jpg");
+    background-size: cover;
+}
+
+#btn-left {
+    position: absolute;
+    left: 0;
+}
+
+#btn-right {
+    position: absolute;
+    right: 0;
+}
+
+.slider-btn {
+    margin-top: 280px;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.slider-artistname {
+    position: absolute;
+    right: 50px;
+    bottom: 30px;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+/*                      HOT ART SECTION             */
+.hot-art-section {
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.section-title {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    border-bottom: 1px solid black;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 30px;
+    letter-spacing: 2px;
+}
+
+.hot-art-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: bottom;
+    justify-content: bottom;
+}
+
+.hot-art-card {
+    position: relative;
+    box-sizing: border-box;
+    margin: 20px auto 0 auto;
+    height: 330px;
+    text-align: center;
+    width: 24%;
+    min-width: 270px;
+    background-color: rgba(0,0,0,0);
+}
+
+.hot-art-img-container {
+    width: 100%;
+    position: absolute;
+    height: 220px;
+    background-color: rgba(0,0,0,0);
+}
+
+.hot-art-img {
+    width: 100%;
+    max-height: 220px;
+    min-height: 170px;
+}
+
+.hot-art-text {
+    font-size: 20px;
+    width: 100%;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    padding-top: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.hot-art-artist, .hot-art-artwork, .hot-art-price {
+    padding: 5px;
+    color: grey;
+}
+
+.hot-art-artwork {
+    color: black; 
+    font-size: 22px;
+}
+
+.section-divider-line {
+    width: 60%;
+    border-bottom: 1px solid black;
+    margin: auto;
+    margin: 30px auto 10px auto;
+}
+
+/*                            artist of the month           */
+.monthly-artist-container {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.monthly-artist-txt {
+    flex: 2;
+    text-align: right;
+    padding: 50px 40px 0 0;
+    color: black;
+    align-items: right;
+    position: relative;
+}
+
+.monthly-artist-title {
+    font-size: 28px;
+}
+
+.monthly-artist-stripe {
+    border-bottom: 2px solid black;
+    width: 30px;
+    align-self: right;
+    position: absolute;
+    right: 30px;
+    top: 130px;
+}
+
+.monthly-artist-name {
+    margin-top: 65px;
+    font-size: 22px;
+}
+
+.monthly-artist-description {
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding-left: 80px;
+}
+
+.monthly-artist-link {
+    padding: 15px 25px;
+    border: 2px solid black;
+    position: absolute;
+    bottom: 100px;
+    right: 40px;
+}
+
+.monthly-artist-link:hover {
+    background-color: black;
+    color: white;
+    transition: 0.6s ease;
+}
+
+.monthly-artist-img {
+    flex: 5;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.monthly-artist-img img {
+    width: 100%;
+}
+
+@media (max-width: 1000px) {
+    .monthly-artist-container {
+        display: block;
+    }
+
+    .monthly-artist-txt {
+        text-align: center;
+        width: 100%;
+    }
+
+    .monthly-artist-link {
+        position: relative;
+        width: 40%;
+        margin: 130px 0 0 30%;
+    }
+
+    .monthly-artist-description {
+        display: block;
+        padding: none;
+    }
+
+    .monthly-artist-stripe {
+        border-bottom: 2px solid black;
+        width: 30%;
+        margin-right: 34%;
+        position: absolute;
+
+    }
+}
+
+/*                       newsletter                    */
+.newsletter-banner {
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding-top: 30px;
+    box-sizing: border-box;
+    background-image: url("../img/backgroundimg1.png");
+    background-size: cover;
+    filter: grayscale(60%);
+}
+
+.newsletter-layover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(0%);
+    color: black;
+    padding-top: 30px;
+}
+
+.newsletter-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.newsletter-txt {
+    padding: 10px;
+}
+
+.newsletter-form {
+    margin: 20px;
+}
+
+#newsletter-email {
+    padding: 5px;
+}
+
+#newsletter-submit {
+    padding: 5px;
+    background-color: black;
+    border-radius: 4px;
+    border: none;
+    color: white;
+}
