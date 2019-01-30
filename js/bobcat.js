@@ -16,17 +16,16 @@ var artists = [ "Fred Jourdin",
                 "Fred Jourdin", 
                 "Fred Jourdin",
                 "Carlos Augusto Motta",
-                "Dan Laurentiu Arcus",
-                "Dan Laurentiu Arcus",
+                "Dani Laurentiu Arcus",
+                "Dani Laurentiu Arcus",
                 "Meireles de Pinho",
                 "Meireles de Pinho"
                 ];                   
 var slider = document.getElementsByClassName("landingpage-slider");
 var buttonRight = document.getElementById("btn-right");
-var scrolltracker = document.getElementById("scrolltracker");
-var navbar = document.getElementsByClassName("navbar");
 
-window.addEventListener("scroll", navbarUp);
+
+
 
 function landingpageSliderPlus () {
     var sliderArtist = document.getElementsByClassName("slider-artistname");
@@ -75,15 +74,7 @@ function landingpageSliderMinus () {
 
 setInterval(landingpageSliderPlus, 5000);
 
-function navbarUp () {
-    var navbar = document.getElementsByClassName("navbar");
-    var scrolltrackertop = scrolltracker.getBoundingClientRect().top;
-    if (scrolltrackertop <= -40) {
-        navbar[0].style.transform = "translateY(-50px)";
-    } else {
-        navbar[0].style.transform = "translateY(0px)";
-    }
-};
+
 
 
 

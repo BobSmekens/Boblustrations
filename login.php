@@ -18,12 +18,13 @@
     <div class="signupform-left">
         <div class="signup-title">Member login</div>
         
-        <form action="php/signupHandler.php" method="GET">
+        <form action="php/loginHandler.php" method="GET">
             <i class="fab fa-mailchimp"></i>
             <input type="e-mail" name="client_email" placeholder="E-mail"><br>
+         
             <i class="fas fa-unlock-alt"></i>
             <input type="password" name="client_password" Placeholder="Password"><br>
-
+           
             <button type="submit">Login</button>
         </form>
     </div>
@@ -32,6 +33,7 @@
         <img id="signup-logo" src="img/illulogo.png" alt="">
         <div class="signup-slogan">Tekken Fist Tournament</div>
     </div>
+    
 </div>
 
 

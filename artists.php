@@ -16,22 +16,24 @@
 <div class="whitespace"></div>
 
 <div class="artistpage-filter">
-    <label for="style">Art style: </label>
-    <select name="style" class="artistpage-filter-style">
-        <option value="artist_type_abstract">Abstract</option>
-        <option value="artist_type_realism">Realism</option>
+    <label for="style">Artist style: </label>
+    <select onchange="filterStyle(this.value)" name="style" class="artistpage-filter-style">
+        <option value="Paintings">Paintings</option>
+        <option value="Drawings">Drawings</option>
     </select>
-    <label for="style">Art type: </label>
-    <select name="style" class="artistpage-filter-style">
-        <option value="artist_style_paintings">Paintings</option>
-        <option value="artist_style_drawings">Drawings</option>
+    <label for="style">Artist type: </label>
+    <select onchange="filterType(this.value)" name="style" class="artistpage-filter-style">
+        <option value="Abstract">Abstract</option>
+        <option value="Realism">Realism</option>
     </select>
     <label for="search"> Artist name: </label>
-    <input id="artistpage-search" type="search" name="artistpage_search" placeholder="Search">
+    <input onkeyup="filterType(this.value)" id="artistpage-search" type="search" name="artistpage_search" placeholder="Search">
 </div>
 
-<?php include "php/artistcard.php"; ?>
-
+<div id="cardWrapper">
+    <?php //include "php/artistcard.php"; ?>
+</div>
+<script src="js/filter.js"></script>
 
 </body>
 </html>
