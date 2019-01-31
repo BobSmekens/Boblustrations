@@ -17,19 +17,22 @@
 
 <div class="artistpage-filter">
 <label for="style">Artwork style: </label>
-    <select onchange="filterStyle(this.value)" name="style" class="artistpage-filter-style">
-        <option value="Paintings">Paintings</option>
-        <option value="Drawings">Drawings</option>
+    <select onchange="filterStyleArt(this.value)" name="style" class="artistpage-filter-style">
+        <option value="All">All</option>    
+        <option value="Painting">Paintings</option>
+        <option value="Drawing">Drawings</option>
     </select>
     <label for="style">Artwork type: </label>
-    <select onchange="filterType(this.value)" name="style" class="artistpage-filter-style">
+    <select onchange="filterTypeArt(this.value)" name="style" class="artistpage-filter-style">
+        <option value="All">All</option>
         <option value="Abstract">Abstract</option>
         <option value="Realism">Realism</option>
     </select>
     <label for="price">Price: </label>
-    <select name="style" class="artistpage-filter-style">
+    <select onchange="filterPriceArt(this.value)" name="style" class="artistpage-filter-style">
+        <option value="All">All</option>
         <option value="61">Below $60</option>
-        <option value="200">&60-$200</option>
+        <option value="200">$60-$200</option>
         <option value="5000">Above $200</option>
     </select>
 <!--    
@@ -44,6 +47,7 @@
     </div>
 </div>
     
+<script src="js/filterart.js"></script>
 
 </body>
 </html>
