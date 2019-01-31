@@ -13,7 +13,7 @@
 
 <?php
 $query = 
-"SELECT artist_name, artist_description, artist_url
+"SELECT artist_name, artist_description, artist_url, artist_id
 FROM artists WHERE artist_monthly = 1 LIMIT 1";
 
 include "db_connection.php";
@@ -28,7 +28,7 @@ $db_result = $conn->query($query);
                 <div class="monthly-artist-name">' . $row['artist_name'] . '</div>
                 <div class="monthly-artist-description">' . $row['artist_description'] .
             '</div>
-            <div class="monthly-artist-link"><a href="">VIEW ARTWORKS</a></div>
+            <div class="monthly-artist-link"><a href="php/singleartist.php?artist_id='. $row['artist_id'].'">VIEW ARTWORKS</a></div>
          </div>
         <div class="monthly-artist-img">
             <img src="img/' . $row['artist_url'] . '" alt="">

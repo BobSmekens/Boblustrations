@@ -1,3 +1,9 @@
+<?php 
+session_start() ;
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,6 +30,7 @@
 
 <!--                         hot art                      -->
 <div class="hot-art-section">
+
     <div class="section-title">Hot art this week:</div>
     <div class="hot-art-container">
         <?php include "php/hotartcard.php"; ?>
@@ -40,20 +47,19 @@
     <div class="newsletter-layover">
         <div class="newsletter-title">Subscribe to newsletter</div>
         <div class="newsletter-txt">Get updates on new art, new artists and discounts</div>
-        <div class="newsletter-form">
-            
+        <div class="newsletter-form">            
             <form action="formHandler.php" method="GET">
                 <input id="newsletter-email" type="text" placeholder="subscribe with e-mail">
                 <input id="newsletter-submit" type="submit">
             </form>
-
         </div>
     </div>
 </div>
 
 <div class="footer">
     <div class="footer-copyright">Copyright &copy Bob Smekens 2019</div>
-</div>   
+</div> 
 
+<script href="js/redirectclick.js"></script>
 </body>
 </html>

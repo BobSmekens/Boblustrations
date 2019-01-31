@@ -11,6 +11,7 @@ function GetInfoFromDatabase(url, outputData) {
   }
   
   function showData(data) {
+      console.log(data.responseText);
       var div = document.getElementsByClassName("hot-art-container");
       div[0].innerHTML = data.responseText;
   }
@@ -21,6 +22,7 @@ function GetInfoFromDatabase(url, outputData) {
 var type = 0;
 var style = 0;
 var price = 0;
+
 function filterStyleArt(filter) {
     style = filter;
     if (filter == "All") {

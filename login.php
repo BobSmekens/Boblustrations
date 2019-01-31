@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,9 +17,15 @@
 
 <div class="signup-container">
     <div class="signupform-left">
-        <div class="signup-title">Member login</div>
-        
-        <form action="php/loginHandler.php" method="GET">
+
+    <?php 
+        if(isset($_SESSION['user_email']) && isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] = true){
+            echo    '<div class="signup-title">Logged in as: <br><br>' . $_SESSION['user_email'] .
+            '</div><br>' . $_SESSION['user_id']. 
+                    '<br><a href="php/logoutHandler.php">Logout</a>';
+        } else {
+            echo  '<div class="signup-title">Member login</div>' . 
+            '       <form action="php/loginHandler.php" method="GET">
             <i class="fab fa-mailchimp"></i>
             <input type="e-mail" name="client_email" placeholder="E-mail"><br>
          
@@ -26,14 +33,18 @@
             <input type="password" name="client_password" Placeholder="Password"><br>
            
             <button type="submit">Login</button>
-        </form>
+        </form>';
+        }
+    ?>
+   
+ 
+    
     </div>
     <div class="signupform-right">
         <div class="signup-slogan">Enter</div>   
         <img id="signup-logo" src="img/illulogo.png" alt="">
         <div class="signup-slogan">Tekken Fist Tournament</div>
-    </div>
-    
+    </div>    
 </div>
 
 

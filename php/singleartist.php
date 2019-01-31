@@ -10,22 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|ZCOOL+XiaoWei" rel="stylesheet">
 </head>
 <body>
-<?php include "php/header2.php" ?>
-<!--
-<div class="singleartist-container debug">
-    <div class="singleartist-flex debug">
-        <div class="singleartist-image debug">
-            <img src="../img/artist1.jpg" alt="">
-        </div>
-        <div class="singleartist-txt debug">
-            Name: naam <br>
-            Style: stijl <br>
-            Description: beschrijving qwdqwdqwd wqdqwdwqdq qwdqwdwqd qdwqdwdq
-            dwqwdqwdw wqdqwdwqd wqdqwdq qwdqwd qwdqd qd q <br>
-        </div>
-    </div>
-</div>
--->
+<?php include "header2.php" ?>
+
 <div class="singleartist-container">
     <?php include "singleartistcard.php" ?>
 </div>

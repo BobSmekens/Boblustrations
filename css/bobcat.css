@@ -8,7 +8,9 @@ html {
     background-color: #f2f2f2;
     overflow-x: hidden;
 }
-
+i {
+    max-width: :16px;
+}
 body {
     margin: 0;
 }
@@ -202,6 +204,23 @@ a:hover {
     transition: 0.5s ease;
 }
 
+#artworkcard {
+    position: relative;
+    box-sizing: border-box;
+    margin: 20px auto 0 auto;
+    height: 360px;
+    text-align: center;
+    width: 24%;
+    padding-bottom: 10px;
+    min-width: 270px;
+    background-color: rgba(0,0,0,0);
+    transition: 0.5s ease;
+}
+
+#artworkcard-link {
+    margin-bottom: 10px;
+}
+
 .hot-art-card:hover {
     transform: scale(1.3);
     z-index: 5;
@@ -226,9 +245,18 @@ a:hover {
     font-weight: bold;
     position: absolute;
     bottom: 0;
-    padding-top: 20px;
+    padding: 20px 0;
     text-align: center;
     background-color: white;
+    box-sizing: border-box;
+}
+
+.hot-art-text a {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
 }
 
 .hot-art-artist, .hot-art-artwork, .hot-art-price {
@@ -507,7 +535,7 @@ a:hover {
     padding: 10px 30px 10px 30px;
     border-radius: 20px;
     border: none;
-    width: 80%;
+    width: 75%;
     font-size: 20px;
     box-sizing: border-box;
     background-color: #ccccff;
@@ -578,6 +606,7 @@ a:hover {
     vertical-align: center;
     text-align: left;
     padding: 0 30px;
+    font-size: 20px;
 }
 
 .singleartist-property {
@@ -613,4 +642,51 @@ a:hover {
 .singleartist-flex {
     height: 300px;
     width: 100%;
+}
+
+.singleartwork-container {
+    margin: 100px auto 0 auto;
+    height: 500px;
+    width: 90%;
+    display: flex;
+}
+
+.singleartwork-right, .singleartwork-left {
+    flex: 1;
+    display: inline-block;
+    height: 100%;
+    margin: auto;
+}
+.singleartwork-left img {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    min-width: 400px;
+    min-height: 400px;
+}
+
+.singleartwork-right{
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
+}
+
+.singleartwork-txtbox {
+    position:absolute;
+    top: 20;
+}
+.singleartwork-property {
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.tocart-btn {
+    padding: 15px;
+    margin: 15px;
+    display: block;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid black;
 }

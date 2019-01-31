@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,11 +19,13 @@
 <div class="artistpage-filter">
     <label for="style">Artist style: </label>
     <select onchange="filterStyle(this.value)" name="style" class="artistpage-filter-style">
+        <option value="All">All</option>
         <option value="Paintings">Paintings</option>
         <option value="Drawings">Drawings</option>
     </select>
     <label for="style">Artist type: </label>
     <select onchange="filterType(this.value)" name="style" class="artistpage-filter-style">
+        <option value="All">All</option>
         <option value="Abstract">Abstract</option>
         <option value="Realism">Realism</option>
     </select>
@@ -35,7 +38,7 @@
 <div id="cardWrapper">
     <?php //include "php/artistcard.php"; ?>
 </div>
-<script src="js/filter.js"></script>
 
+<script src="js/filter.js"></script>
 </body>
 </html>

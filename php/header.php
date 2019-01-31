@@ -15,6 +15,7 @@
 echo    '<div class="navbar">
             <div id="branding"><a href="index.php">B<img id="brandingimg" src="img/illulogo.png" alt="">B | LUSTRATIONS</a></div>
                 <div class="navbar-links">
+                <a href="php/clearCartHandler.php">clearcart.</a>
                 <a href="artists.php">artists.</a>
                 <a href="artwork.php">artwork.</a>
                 <a id="signup-link" href="signup.php">signup.</a>/
