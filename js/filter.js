@@ -28,4 +28,8 @@ function filterStyle(filter) {
 function filterType(filter) {
     type = filter;
     GetInfoFromDatabase("php/artistcard.php?artist_type=" +filter, showData);
-};
+}
+
+function filterText (filter) {
+    GetInfoFromDatabase("php/artistcard.php?artist_name=%" +filter+"%", showData);
+}

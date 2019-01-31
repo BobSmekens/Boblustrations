@@ -260,7 +260,6 @@ a:hover {
     margin: 50px 20px 0 10px;
     border: 1px solid black;
     display: inline-block;
-    height: 600px;
     vertical-align: top;
     box-sizing: border-box;
     position: relative;
@@ -277,7 +276,7 @@ a:hover {
 }
 
 .artistpage-txt {
-    padding: 50px 0 0 40px;
+    padding: 20px 0 0 40px;
     color: black;
     align-items: right;
     position: relative;
@@ -335,7 +334,6 @@ a:hover {
     margin: 20px 0;
     box-sizing: border-box;
     width: 80%;
-    height: 90px;
     text-overflow: ellipsis;
 }
 
@@ -355,8 +353,6 @@ a:hover {
     vertical-align: end;
     width: 60%;
     max-width: 150px;
-    position: absolute;
-    bottom: 10px;
     left: 20%;
 }
 
@@ -379,9 +375,9 @@ a:hover {
 }
 
 .artistpage-img img {
-    max-height: 250px;
+    max-height: 200px;
     width:100%;
-    min-width: 250px;
+    min-width: 200px;
     margin-top: 20px;
 }
 
@@ -593,15 +589,21 @@ a:hover {
     width: 100%;
     box-sizing: border-box;
     padding: 20px 80px;
+    text-align: center;
 }
 
 .single-artist-art-card {
     width: 33%;
-    height: 300px;
     width: 200px;
     display: inline-block;
     vertical-align: top;
-    margin: 0 20px;
+    margin: 20px;
+}
+
+.single-artist-moreart {
+    width: 100%; 
+    text-align: center; 
+    font-size: 24px;
 }
 
 .single-artist-art-card img {

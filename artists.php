@@ -26,8 +26,10 @@
         <option value="Abstract">Abstract</option>
         <option value="Realism">Realism</option>
     </select>
+<!--
     <label for="search"> Artist name: </label>
-    <input onkeyup="filterType(this.value)" id="artistpage-search" type="search" name="artistpage_search" placeholder="Search">
+    <input onchange="filterText(this.value)" id="artistpage-search" type="search" name="artistpage_search" placeholder="Search">
+-->
 </div>
 
 <div id="cardWrapper">

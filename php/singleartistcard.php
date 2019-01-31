@@ -17,8 +17,8 @@ echo '<div class="singleartist-flex">
         <div class="singleartist-image">
             <img src="../img/' . $row['artist_url'] . '" alt="">
         </div>
-        <div class="singleartist-txt debug">
-            <Strong>Name: </strong> <br><br>' . $row['artist_name'] . 'naam <br>
+        <div class="singleartist-txt">
+            <Strong>Name: </strong> <br><br>' . $row['artist_name'] . '<br>
             <br><Strong>Style:</strong><br><br> '. $row['artist_style'] . ' <br>
             <br><Strong>Description:</strong><br><br>'. $row['artist_description'] . ' 
         </div>

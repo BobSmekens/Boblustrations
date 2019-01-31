@@ -26,12 +26,12 @@
     </div>
 </div>
 -->
-<div class="singleartist-container debug">
+<div class="singleartist-container">
     <?php include "singleartistcard.php" ?>
 </div>
 
     <div class="single-artist-art">
-
+        <div class="single-artist-moreart">More art of this artist</div>
     <?php include "singleartistartcard.php" ?>
         
     </div>

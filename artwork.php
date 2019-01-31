@@ -16,18 +16,26 @@
 <div class="whitespace"></div>
 
 <div class="artistpage-filter">
-    <label for="style">Art style: </label>
-    <select name="style" class="artistpage-filter-style">
-        <option value="artist_type_abstract">Abstract</option>
-        <option value="artist_type_realism">Realism</option>
+<label for="style">Artwork style: </label>
+    <select onchange="filterStyle(this.value)" name="style" class="artistpage-filter-style">
+        <option value="Paintings">Paintings</option>
+        <option value="Drawings">Drawings</option>
     </select>
-    <label for="style">Art type: </label>
-    <select name="style" class="artistpage-filter-style">
-        <option value="artist_style_paintings">Paintings</option>
-        <option value="artist_style_drawings">Drawings</option>
+    <label for="style">Artwork type: </label>
+    <select onchange="filterType(this.value)" name="style" class="artistpage-filter-style">
+        <option value="Abstract">Abstract</option>
+        <option value="Realism">Realism</option>
     </select>
+    <label for="price">Price: </label>
+    <select name="style" class="artistpage-filter-style">
+        <option value="61">Below $60</option>
+        <option value="200">&60-$200</option>
+        <option value="5000">Above $200</option>
+    </select>
+<!--    
     <label for="search"> Artist/Artwork: </label>
     <input id="artistpage-search" type="search" name="artistpage_search" placeholder="Search">
+-->
 </div>
 
 <div class="artwork-section">

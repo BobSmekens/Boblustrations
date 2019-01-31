@@ -7,19 +7,29 @@ if(isset($_GET['artist_type'])) {
     $type = $_GET['artist_type'];
 }
 
+if(isset($_GET['artist_name'])) {
+    $name = $_GET['artist_name'];
+}
+
 if (isset($_GET['artist_style'])){
     $query = 
-    "SELECT artist_id, artist_name, artist_description, artist_url, artist_style, artist_type
+    "SELECT artist_country, artist_id, artist_name, artist_description, artist_url, artist_style, artist_type
     FROM artists
     WHERE artist_style = '$style'";
 } else if(isset($_GET['artist_type'])){
     $query =
-    "SELECT artist_id, artist_name, artist_description, artist_url, artist_style, artist_type
+    "SELECT artist_country, artist_id, artist_name, artist_description, artist_url, artist_style, artist_type
     FROM artists
      WHERE artist_type = '$type'";
+} else if (isset($_GET['artist_style']) && isset($_GET['artist_type']) ){
+    $query = 
+    "SELECT artist_country, artist_id, artist_name, artist_description, artist_url, artist_style, artist_type
+    FROM artists
+    WHERE artist_style = '$style' 
+    AND artist_type = '$type'";
 } else{
     $query = 
-    "SELECT artist_id, artist_name, artist_description, artist_url, artist_style, artist_type
+    "SELECT artist_country, artist_id, artist_name, artist_description, artist_url, artist_style, artist_type
     FROM artists";
 }
 
@@ -33,7 +43,8 @@ foreach ($db_result as $row)
         '<div class="artistpage-container">      
             <div class="artistpage-txt">
                 <div class="artistpage-name">' . $row['artist_name'] . '</div>
-                <div class="artistpage-description">' . $row['artist_description'] . '</div>
+                <div class="artistpage-description">' . $row['artist_style'] . ' / '.
+            $row['artist_type'] . '</div>
             </div>
             <div class="artistpage-img artistpage-txt">
                 <img src="img/' . $row['artist_url'] . '" alt="">
