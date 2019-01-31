@@ -15,32 +15,19 @@
 <?php include "php/header.php" ?>
 
 <div class="whitespace"></div>
-<br>
-cart works
 
 <?php
 $query = 
-"SELECT artist_country, artist_id, artist_name, artist_description, artist_url, artist_style, artist_type
-FROM artists";
-}
+"SELECT artwork.artwork_name, artwork.artwork_price
+FROM cart
+INNER JOIN artwork 
+ON artwork.artwork_id = cart.artwork_id";
 
 include "db_connection.php";
 $db_result = $conn->query($query);  
 foreach ($db_result as $row)
 {   
-    echo 
-    '<div class="artistpage-container">      
-        <div class="artistpage-txt">
-            <div class="artistpage-name">' . $row['artist_name'] . '</div>
-            <div class="artistpage-description">' . $row['artist_style'] . ' / '.
-        $row['artist_type'] . '</div>
-        </div>
-        <div class="artistpage-img artistpage-txt">
-            <img src="img/' . $row['artist_url'] . '" alt="">
-        </div>
-        <div class="artistpage-link"><a href="php/singleartist.php?artist_id='. $row['artist_id'] . '">VIEW ARTWORKS</a></div>
-
-    </div>';
+ echo $row['artwork_name'] . '<br>' . $row['artwork_price'] . '<br><br>';
 }
 $conn = null;
 
