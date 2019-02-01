@@ -28,7 +28,7 @@ $db_result = $conn->query($query);
                 <div class="monthly-artist-name">' . $row['artist_name'] . '</div>
                 <div class="monthly-artist-description">' . $row['artist_description'] .
             '</div>
-            <div class="monthly-artist-link"><a href="php/singleartist.php?artist_id='. $row['artist_id'].'">VIEW ARTWORKS</a></div>
+            <div class="monthly-artist-link"><a href="php/singleartist.php?artist_id='. $row['artist_id'].'">VIEW ARTIST</a></div>
          </div>
         <div class="monthly-artist-img">
             <img src="img/' . $row['artist_url'] . '" alt="">

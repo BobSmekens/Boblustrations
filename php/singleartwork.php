@@ -12,21 +12,8 @@
 <body>
 <?php include "header2.php" ?>
 
-<div class="singleartwork-container debug">
-    <div class="singleartwork-left debug">
-        <img src="../img/fredjourdin1.jpg" alt="">
-    </div>
-    <div class="singleartwork-right debug">
-        <div class="singleartwork-txtbox">
-            <div class="singleartwork-property"><strong>Name:</strong><br> artwork name</div>
-            <div class="singleartwork-property"><strong>Artist:</strong><br> artwork artist</div>
-            <div class="singleartwork-property"><strong>Style:</strong><br> artwork style</div>
-            <div class="singleartwork-property"><strong>Type:</strong><br> artwork type</div>
-            <div class="singleartwork-property"><strong>Price:</strong><br> artwork price</div>
-            <button class="tocart-btn">ADD TO CART</button>
-        </div>
-               
-    </div>
+<div class="singleartwork-container">
+    <?php include "singleartworkcard.php" ?>
 </div>
 
 

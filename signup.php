@@ -35,11 +35,13 @@
             <i class="fas fa-lock"></i>
             <input type="password" name="client_password" Placeholder='Password'><br>
 
-            <button type="submit">Submit</button>
+            <button onclick="signupCompleted()" type="submit">Submit</button>
+
+            <div id="signup-completed">Signup completed!</div>
         </form>
     </div>
 </div>
 
-
+<script src="js/redirectclick.js"></script>
 </body>
 </html>

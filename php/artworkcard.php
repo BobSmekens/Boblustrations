@@ -63,8 +63,8 @@ $db_result = $conn->query($query);
                     <div class="hot-art-artist">' . $row['artist_name']. '</div>
                     <div class="hot-art-artwork">' . $row['artwork_name']. '</div>
                     <div class="hot-art-price">$'. $row['artwork_price'] . '</div>
-                    <a id="artworkcard-link" href="php/singleartwork.php?artwork_id=' . $row['artwork_id'] . '">VIEW</a>
-                    <a id="artworkcard-cart" href="php/addToCartHandler.php?artwork_id=' . $row['artwork_id']. '&artwork_price=' . $row['artwork_price'] . '"> CART</a>
+                    <a class="artworkcard-link" href="php/singleartwork.php?artwork_id=' . $row['artwork_id'] . '">VIEW</a>                    
+                    <a class="artworkcard-cart" href="php/addToCartHandler.php?artwork_id=' . $row['artwork_id']. '&artwork_price=' . $row['artwork_price'] . '"> CART</a>
                 </div>
             </div>';
     }

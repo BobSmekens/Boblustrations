@@ -49,7 +49,7 @@ foreach ($db_result as $row)
             <div class="artistpage-img artistpage-txt">
                 <img src="img/' . $row['artist_url'] . '" alt="">
             </div>
-            <div class="artistpage-link"><a href="php/singleartist.php?artist_id='. $row['artist_id'] . '">VIEW ARTWORKS</a></div>
+            <div class="artistpage-link"><a href="php/singleartist.php?artist_id='. $row['artist_id'] . '">VIEW ARTIST</a></div>
 
         </div>';
     }

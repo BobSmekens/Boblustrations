@@ -55,6 +55,12 @@ a:hover {
     width: 22px;
     margin-bottom: -5px;
     border-radius: 50%;
+    animation: rotateimg 5s ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotateimg {
+    50%{transform:rotate(360deg)};
 }
 
 #signup-link, #login-link {
@@ -187,7 +193,8 @@ a:hover {
 .hot-art-container {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 80%;
+    margin: auto;
     align-items: bottom;
     justify-content: bottom;
 }
@@ -204,7 +211,7 @@ a:hover {
     transition: 0.5s ease;
 }
 
-#artworkcard {
+.artworkcard {
     position: relative;
     box-sizing: border-box;
     margin: 20px auto 0 auto;
@@ -217,9 +224,13 @@ a:hover {
     transition: 0.5s ease;
 }
 
-#artworkcard-link {
-    margin-bottom: 10px;
+.artworkcard-link, .artworkcard-cart {
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    display: inline-block;
 }
+
 
 .hot-art-card:hover {
     transform: scale(1.3);
@@ -278,18 +289,22 @@ a:hover {
 
 /*                            artist of the month           */
 .monthly-artist-container {
-    width: 100%;
+    width: 80%;
+    margin: auto;
     display: flex;
     position: relative;
 }
 
 .artistpage-container {
-    width: 30%;
-    margin: 50px 20px 0 10px;
+    width: 28%;
+    height: 400px;
+    margin: 50px 2% 0 2%;
     border: 1px solid black;
     display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
+    position: relative;
+    padding: 0 30px 20px 30px;
     position: relative;
 }
 
@@ -359,7 +374,7 @@ a:hover {
 }
 
 .artistpage-description {
-    margin: 20px 0;
+    margin: 10px 0;
     box-sizing: border-box;
     width: 80%;
     text-overflow: ellipsis;
@@ -382,6 +397,8 @@ a:hover {
     width: 60%;
     max-width: 150px;
     left: 20%;
+    position: absolute;
+    bottom: 20px;
 }
 
 .monthly-artist-link:hover, .artistpage-link:hover {
@@ -406,7 +423,7 @@ a:hover {
     max-height: 200px;
     width:100%;
     min-width: 200px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 @media (max-width: 1000px) {
@@ -619,6 +636,7 @@ a:hover {
     box-sizing: border-box;
     padding: 20px 80px;
     text-align: center;
+    margin-top: 20px;
 }
 
 .single-artist-art-card {
@@ -629,10 +647,15 @@ a:hover {
     margin: 20px;
 }
 
+.single-artist-text {
+    margin-top: 30px;
+}
+
 .single-artist-moreart {
     width: 100%; 
     text-align: center; 
     font-size: 24px;
+    margin-top: 20px;
 }
 
 .single-artist-art-card img {
@@ -676,10 +699,25 @@ a:hover {
     position:absolute;
     top: 20;
 }
-.singleartwork-property {
+.singleartwork-property,  {
     margin: 5px;
     padding: 5px;
     font-size: 20px;
+    display: block;
+    font-weight: bold;
+}
+
+.artwork-property {
+    padding: 10px 0;
+    font-size: 20px;
+    display: block;
+    font-weight: bold;
+}
+
+.singleartwork-dbproperty {
+    padding: 5px;
+    margin-left: 5px;
+    display: block;  
 }
 
 .tocart-btn {
@@ -689,4 +727,74 @@ a:hover {
     font-size: 20px;
     background-color: rgba(0,0,0,0);
     border: 1px solid black;
+}
+
+.art-title, .single-artist-price {
+    padding: 5px 0;
+    box-sizing: border-box;
+}
+
+.cart-container {
+    width: 60%;
+    margin: 20px 0 10px 100px;
+    border-bottom: 1px solid black;
+    padding: 0 0 10px 10px;
+}
+
+.cart-left img {
+    width: 200px;
+    height: 200px;
+
+}
+.cart-right, .cart-left {
+    display: inline-block;
+    width: 48%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.cart-checkoutbox {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    text-align: right;
+    border: 2px solid black;
+    border-radius: 20px 0 0 20px;
+    padding: 20px;
+    border-right: none;
+    z-index: 2;
+    background-color: #f2f2f2;
+}
+
+.cart-checkoutbox a {
+    padding: 5px;
+    margin-top: 5px;
+    display: inline-block;
+    border: 1px solid black;
+    text-align: right;
+}
+
+.checkoutbox-property {
+    padding: 5px;
+    font-size: 24px;
+    text-align: left;
+}
+
+#signup-completed {
+    display: none;
+}
+
+.cart-not-loggedin {
+    margin: 200px auto 0 auto;
+    text-align: center;
+    font-size: 90px;
+}
+
+.cart-text {
+    margin: 100px 0 10px 100px;
+    width: 60%;
+    border-bottom: 1px solid black;
+    padding: 30px;
+    text-align: center;
+    font-size: 24px;
 }
