@@ -15,41 +15,41 @@ if(isset($_GET['artwork_price'])) {
 if(isset($_GET['artwork_price']) && $price == '61' ){
     $price = $_GET['artwork_price'];
     $query = 
-    "SELECT artwork.artist_id, artwork_url, artists.artist_id, artists.artist_name, artwork.artwork_name, artwork.artwork_price, artwork_id, artwork.artwork_type, artwork.artwork_style
-    FROM artwork
-    INNER JOIN artists ON artists.artist_id = artwork.artist_id
-    WHERE artwork.artwork_price < $price";
+    "SELECT artwork1.artwork_artist, artwork_url, artists1.artist_id, artists1.artist_name, artwork1.artwork_name, artwork1.artwork_price, artwork_id, artwork1.artwork_type, artwork1.artwork_style
+    FROM artwork1
+    INNER JOIN artists1 ON artists1.artist_id = artwork1.artwork_artist
+    WHERE artwork1.artwork_price < $price";
 }else if(isset($_GET['artwork_price']) && $price == '200' ){
     $price = $_GET['artwork_price'];
     $query = 
-    "SELECT artwork.artist_id, artwork_url, artists.artist_id, artists.artist_name, artwork.artwork_name, artwork.artwork_price, artwork_id, artwork.artwork_type, artwork.artwork_style
-    FROM artwork
-    INNER JOIN artists ON artists.artist_id = artwork.artist_id
-    WHERE artwork.artwork_price > 60 AND artwork.artwork_price < 201";
+    "SELECT artwork1.artwork_artist, artwork_url, artists1.artist_id, artists1.artist_name, artwork1.artwork_name, artwork1.artwork_price, artwork_id, artwork1.artwork_type, artwork1.artwork_style
+    FROM artwork1
+    INNER JOIN artists1 ON artists1.artist_id = artwork1.artwork_artist
+    WHERE artwork1.artwork_price > 60 AND artwork1.artwork_price < 201";
 }else if(isset($_GET['artwork_price']) && $price == '5000' ){
      $price = $_GET['artwork_price'];
     $query = 
-    "SELECT artwork.artist_id, artwork_url, artists.artist_id, artists.artist_name, artwork.artwork_name, artwork.artwork_price, artwork_id, artwork.artwork_type, artwork.artwork_style
-    FROM artwork
-    INNER JOIN artists ON artists.artist_id = artwork.artist_id
-    WHERE artwork.artwork_price > 200";
+    "SELECT artwork1.artwork_artist, artwork_url, artists1.artist_id, artists1.artist_name, artwork1.artwork_name, artwork1.artwork_price, artwork_id, artwork1.artwork_type, artwork1.artwork_style
+    FROM artwork1
+    INNER JOIN artists1 ON artists1.artist_id = artwork1.artwork_artist
+    WHERE artwork1.artwork_price > 200";
 }else if (isset($_GET['artwork_style'])){
     $query = 
-    "SELECT artwork.artist_id, artwork_url, artists.artist_id, artists.artist_name, artwork.artwork_name, artwork.artwork_price, artwork_id, artwork.artwork_type, artwork.artwork_style
-    FROM artwork
-    INNER JOIN artists ON artists.artist_id = artwork.artist_id
-    WHERE artwork.artwork_style = '$style'";
+    "SELECT artwork1.artwork_artist, artwork_url, artists1.artist_id, artists1.artist_name, artwork1.artwork_name, artwork1.artwork_price, artwork_id, artwork1.artwork_type, artwork1.artwork_style
+    FROM artwork1
+    INNER JOIN artists1 ON artists1.artist_id = artwork1.artwork_artist
+    WHERE artwork1.artwork_style = '$style'";
 } else if(isset($_GET['artwork_type'])){
     $query =
-    "SELECT artwork.artist_id, artwork_url, artists.artist_id, artists.artist_name, artwork_name, artwork_price, artwork_type, artwork_id, artwork_style
-    FROM artwork
-    INNER JOIN artists ON artists.artist_id = artwork.artist_id
-    WHERE artwork.artwork_type = '$type'";
+    "SELECT artwork1.artwork_artist, artwork_url, artists1.artist_id, artists1.artist_name, artwork_name, artwork_price, artwork_type, artwork_id, artwork_style
+    FROM artwork1
+    INNER JOIN artists1 ON artists1.artist_id = artwork1.artwork_artist
+    WHERE artwork1.artwork_type = '$type'";
 } else{
     $query = 
-    "SELECT artwork.artist_id, artwork_url, artists.artist_id, artists.artist_name, artwork_name, artwork_price, artwork_type, artwork_id, artwork_style
-    FROM artwork
-    INNER JOIN artists ON artists.artist_id = artwork.artist_id";
+    "SELECT artwork1.artwork_artist, artwork_url, artists1.artist_id, artists1.artist_name, artwork_name, artwork_price, artwork_type, artwork_id, artwork_style
+    FROM artwork1
+    INNER JOIN artist1s ON artists1.artist_id = artwork1.artwork_artist";
 }
 
 include "db_connection.php";

@@ -13,24 +13,24 @@ if(isset($_GET['artist_name'])) {
 
 if (isset($_GET['artist_style'])){
     $query = 
-    "SELECT artist_country, artist_id, artist_name, artist_description, artist_url, artist_style, artist_type
-    FROM artists
+    "SELECT artist_id, artist_name, artist_description, artist_url, artist_style, artist_type
+    FROM artists1
     WHERE artist_style = '$style'";
 } else if(isset($_GET['artist_type'])){
     $query =
-    "SELECT artist_country, artist_id, artist_name, artist_description, artist_url, artist_style, artist_type
-    FROM artists
+    "SELECT artist_id, artist_name, artist_description, artist_url, artist_style, artist_type
+    FROM artists1
      WHERE artist_type = '$type'";
 } else if (isset($_GET['artist_style']) && isset($_GET['artist_type']) ){
     $query = 
-    "SELECT artist_country, artist_id, artist_name, artist_description, artist_url, artist_style, artist_type
-    FROM artists
+    "SELECT artist_id, artist_name, artist_description, artist_url, artist_style, artist_type
+    FROM artists1
     WHERE artist_style = '$style' 
     AND artist_type = '$type'";
 } else{
     $query = 
-    "SELECT artist_country, artist_id, artist_name, artist_description, artist_url, artist_style, artist_type
-    FROM artists";
+    "SELECT artist_id, artist_name, artist_description, artist_url, artist_style, artist_type
+    FROM artists1";
 }
 
 

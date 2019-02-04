@@ -8,7 +8,7 @@ if(isset($_SESSION['user_id'])) {
 } else {
     $client_id = 1;
 }
-echo $artwork_id . $artwork_price . $client_id;
+
 $query = 
 "INSERT INTO cart(cart_id, artwork_id, artwork_price, client_id)
 VALUES (NULL, $artwork_id, $artwork_price, $client_id)";

@@ -1,6 +1,7 @@
 <?php session_start() ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,14 +10,15 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/bobcat.css" />
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|ZCOOL+XiaoWei" rel="stylesheet">
 </head>
+
 <body>
-<div id="scrolltracker"></div>
+    <div id="scrolltracker"></div>
 
-<?php include "php/header.php" ?>
+    <?php include "php/header.php" ?>
 
-<div class="whitespace"></div>
-<div class="cart-text">Current items in your personal shopping cart:</div>
-<?php
+    <div class="whitespace"></div>
+    <div class="cart-text">Current items in your personal shopping cart:</div>
+    <?php
 
 if(isset($_SESSION['user_id'])){
 
@@ -39,13 +41,15 @@ $conn = null;
 }
 ?>
 
-<?php
+    <?php
 if(isset($_SESSION['user_id'])){
+$user_id = $_SESSION['user_id'];
 
 $query = 
 "SELECT SUM(artwork_price) 
 AS 'total'
-FROM cart";
+FROM cart
+WHERE client_id = $user_id";
 
 include "db_connection.php";
 $totalprice = $conn->query($query); 
@@ -59,16 +63,16 @@ echo '
 $conn = null;
 }
 ?>
-<?php
+    <?php
 if(isset($_SESSION['user_id'])){
 $client_id = $_SESSION['user_id'];
 $query = 
-"SELECT artwork.artwork_name, artwork.artwork_price, artists.artist_name, artwork.artwork_url
+"SELECT artwork1.artwork_name, artwork1.artwork_price, artists.artist_name, artwork1.artwork_url
 FROM cart
-INNER JOIN artwork 
-ON artwork.artwork_id = cart.artwork_id
+INNER JOIN artwork1
+ON artwork1.artwork_id = cart.artwork_id
 INNER JOIN artists
-ON artwork.artist_id = artists.artist_id
+ON artwork1.artwork_artist = artists.artist_id
 INNER JOIN clients
 ON cart.client_id = clients.client_id
 WHERE clients.client_id = '$client_id'";
@@ -99,5 +103,5 @@ $conn = null;
 ?>
 
 </body>
-</html>
 
+</html>

@@ -8,8 +8,8 @@ echo $client_name . '<br>' . $client_email . '<br>' . $client_password;
 
 include "db_connection.php";
 
-$qry = "INSERT INTO clients (client_name, client_email, client_password)
-VALUES ('$client_name', '$client_email', '$client_password')";
+$qry = "INSERT INTO clients (client_name, client_email, client_password, client_type)
+VALUES ('$client_name', '$client_email', '$client_password', 'User')";
 
 $conn->query($qry);
 

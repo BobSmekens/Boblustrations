@@ -4,10 +4,10 @@
 $artworkid = $_GET['artwork_id'];
 
 $query = 
-"SELECT artwork_url, artwork.artist_id, artwork_name, artwork_price, artwork_id, artists.artist_name, artwork_style, artwork_type
-FROM artwork
+"SELECT artwork_url, artwork1.artwork_artist, artwork_name, artwork_price, artwork_id, artists.artist_name, artwork_style, artwork_type
+FROM artwork1
 INNER JOIN artists
-ON artwork.artist_id = artists.artist_id
+ON artwork1.artwork_artist = artists.artist_id
 WHERE artwork_id = '$artworkid'";
 
 include "db_connection.php";
