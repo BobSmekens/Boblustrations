@@ -24,10 +24,16 @@
     <form action="addArtistHandler.php" method="GET">
         <input type="text" placeholder="name" name="name"><br>
         <input type="text" placeholder="artist-bio" name="artist_bio"><br>
-        <input type="text" placeholder="style" name="style"><br>
+        <select type="text" placeholder="style" name="style">
+            <option value="Drawings">Drawing</option>
+            <option value="Paintings">Painting</option>
+        </select>   <br>
         <input type="text" placeholder="monthly" name="monthly"><br>
         <input type="text" placeholder="img url" name="url"><br>
-        <input type="text" placeholder="type" name="type"><br>
+        <select type="text" placeholder="type" name="type"><br>
+            <option value="Realism">Realism</option>
+            <option value="Abstract">Abstract</option>
+        </select><br>
         <button type="submit">Submit</button>
     </form>
 </div>
@@ -42,13 +48,13 @@
             <option value="Painting">Painting</option>
         </select><br>
         <input type="text" placeholder="price" name="price"><br>
-        <input type="text" placeholder="img url" name="url">
+        <input type="text" placeholder="img url (fredjourdin1.jpg)" name="url">
         <br>
         <select type="select" placeholder="type" name="type">
             <option value="Realism">Realism</option>
             <option value="Abstract">Abstract</option>
         </select><br>
-        <input type="text" placeholder="hot" name="hot"><br>
+        <input type="text" placeholder="hot(0 or 1)" name="hot"><br>
         <button type="submit">Submit</button>
     </form>
 </div>

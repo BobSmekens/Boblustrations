@@ -67,12 +67,12 @@ $conn = null;
 if(isset($_SESSION['user_id'])){
 $client_id = $_SESSION['user_id'];
 $query = 
-"SELECT artwork1.artwork_name, artwork1.artwork_price, artists.artist_name, artwork1.artwork_url
+"SELECT artwork1.artwork_name, artwork1.artwork_price, artists1.artist_name, artwork1.artwork_url
 FROM cart
 INNER JOIN artwork1
 ON artwork1.artwork_id = cart.artwork_id
-INNER JOIN artists
-ON artwork1.artwork_artist = artists.artist_id
+INNER JOIN artists1
+ON artwork1.artwork_artist = artists1.artist_id
 INNER JOIN clients
 ON cart.client_id = clients.client_id
 WHERE clients.client_id = '$client_id'";

@@ -49,7 +49,7 @@ if(isset($_GET['artwork_price']) && $price == '61' ){
     $query = 
     "SELECT artwork1.artwork_artist, artwork_url, artists1.artist_id, artists1.artist_name, artwork_name, artwork_price, artwork_type, artwork_id, artwork_style
     FROM artwork1
-    INNER JOIN artist1s ON artists1.artist_id = artwork1.artwork_artist";
+    INNER JOIN artists1 ON artists1.artist_id = artwork1.artwork_artist";
 }
 
 include "db_connection.php";

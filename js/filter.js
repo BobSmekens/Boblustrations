@@ -15,6 +15,7 @@ function GetInfoFromDatabase(url, outputData) {
 function showData(data) {
     var div = document.getElementById("cardWrapper");
     div.innerHTML = data.responseText;
+    console.log(data.responseText);
 }
 
 GetInfoFromDatabase("php/artistcard.php", showData);
