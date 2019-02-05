@@ -12,7 +12,7 @@ foreach($db_Result as $row) {
     }
  echo '
     </select>
-    <button type="submit">delete</button>
+    <button type="submit">delete artist</button>
 </form>';
 
 ?>

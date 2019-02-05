@@ -13,16 +13,17 @@ include "db_connection.php";
 $db_result = $conn->query($query);  
     foreach ($db_result as $row)
     {            
-echo '<div class="singleartist-flex">
-        <div class="singleartist-image">
-            <img src="../img/' . $row['artist_url'] . '" alt="">
-        </div>
-        <div class="singleartist-txt">
-            <Strong>Name: </strong> <br><br>' . $row['artist_name'] . '<br>
-            <br><Strong>Style:</strong><br><br> '. $row['artist_style'] . ' <br>
-            <br><Strong>Description:</strong><br><br>'. $row['artist_description'] . ' 
-        </div>
-    </div>';
+echo '
+        <div class="singleartist-name">'.$row['artist_name'].'.</div>
+        <div class="singleartist-flex">
+            <div class="singleartist-image">
+                <img src="../img/' . $row['artist_url'] . '" alt="">
+            </div>
+            <div class="singleartist-txt">
+                <br><Strong>Style:</strong><br><br> '. $row['artist_style'] . ' <br>
+                <br><Strong>Description:</strong><br><br>'. $row['artist_description'] . ' 
+            </div>
+        </div>';
     }
 
     $conn = null;

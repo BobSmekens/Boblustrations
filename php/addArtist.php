@@ -1,7 +1,7 @@
 <?php
 echo '
 
-    <div class="admin-form debug">
+<div class="admin-form debug">
     <div class="admin-form-title">Add artist</div>
     <form action="addArtistHandler.php" method="GET">
         <input type="text" placeholder="name" name="name"><br>

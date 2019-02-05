@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +23,7 @@
 </div>
 
     <div class="single-artist-art">
-        <div class="single-artist-moreart">More art of this artist</div>
+        <div class="single-artist-moreart">More art of this artist:</div>
     <?php include "singleartistartcard.php" ?>
         
     </div>

@@ -23,7 +23,7 @@
 
 <div class="artistpage-filter">
 <label for="style">Artwork style: </label>
-    <select onchange="filterStyleArt(this.value)" name="style" class="artistpage-filter-style">
+    <select id="filterStyleButton" onchange="filterStyleArt(this.value)" name="style" class="artistpage-filter-style">
         <option value="All">All</option>    
         <option value="Painting">Paintings</option>
         <option value="Drawing">Drawings</option>

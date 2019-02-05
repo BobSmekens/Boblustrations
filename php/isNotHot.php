@@ -12,7 +12,7 @@ foreach($db_Result as $row) {
     }
  echo '
     </select>
-    <button type="submit">not hot</button>
+    <button type="submit">is not hot</button>
 </form>';
 
 ?>

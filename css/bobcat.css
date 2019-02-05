@@ -11,10 +11,6 @@ html {
     overflow-x: hidden;
 }
 
-i {
-    max-width: :16px;
-}
-
 body {
     margin: 0;
 }
@@ -187,7 +183,7 @@ a:hover {
     width: 100%;
     margin: auto;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 30px 10px;
 }
 
 .section-title {
@@ -311,6 +307,7 @@ a:hover {
     margin: auto;
     display: flex;
     position: relative;
+    padding: 30px 10px;
 }
 
 .artistpage-container {
@@ -544,6 +541,7 @@ a:hover {
     display: flex;
     width: 70%;
     -webkit-box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .signupform-left {
@@ -584,6 +582,7 @@ a:hover {
     box-sizing: border-box;
     background-color: #f2f2f2;
     -webkit-box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.75) inset;
+    box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.75) inset;
 }
 
 .signupform-right .signup-title,
@@ -605,6 +604,7 @@ a:hover {
     border: none;
     border-radius: 3px;
     -webkit-box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .artistpage-filter {
@@ -629,7 +629,7 @@ a:hover {
 
 .singleartist-container {
     width: 80%;
-    margin: 100px auto 0 auto;
+    margin: 80px auto 0 auto;
     text-align: center;
 }
 
@@ -665,11 +665,12 @@ a:hover {
 
 .single-artist-art {
     display: block;
-    width: 100%;
+    width: 80%;
     box-sizing: border-box;
-    padding: 20px 80px;
+    padding: 30px 80px;
     text-align: center;
-    margin-top: 20px;
+    margin: 30px auto 0 auto;
+    border-top: 1px solid black;
 }
 
 .single-artist-art-card {
@@ -694,18 +695,30 @@ a:hover {
 
 .single-artist-art-card img {
     width: 100%;
+    height: 150px;
 }
 
 .singleartist-flex {
-    height: 300px;
     width: 100%;
 }
 
+.singleartist-name {
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+    padding: 30px;
+}
+
 .singleartwork-container {
-    margin: 100px auto 0 auto;
-    height: 500px;
+    margin: 80px auto 0 auto;
     width: 90%;
     display: flex;
+    font-size: 32px;
+    text-align: center;
+}
+
+.single-artwork-headline {
+    text-align: center;
 }
 
 .singleartwork-right,
@@ -714,6 +727,8 @@ a:hover {
     display: inline-block;
     height: 100%;
     margin: auto;
+    font-size: 22px;
+    text-align: left;
 }
 
 .singleartwork-left img {
@@ -736,9 +751,7 @@ a:hover {
     top: 20;
 }
 
-.singleartwork-property,
-    {
-    margin: 5px;
+.singleartwork-property {
     padding: 5px;
     font-size: 20px;
     display: block;
@@ -754,7 +767,6 @@ a:hover {
 
 .singleartwork-dbproperty {
     padding: 5px;
-    margin-left: 5px;
     display: block;
 }
 
@@ -842,15 +854,14 @@ a:hover {
 
 .adminpage-wrapper {
     display: flex;
+    text-align: center;
 }
 
 .admin-form {
     height: 300px;
-    width: 40%;
-    margin: 150px 2% 0 2%;
+    margin: 150px auto 0 auto;
     display: inline-block;
     vertical-align: top;
-    flex: 1;
     min-width: 300px;
 }
 
@@ -868,8 +879,39 @@ a:hover {
     text-align: center;
 }
 
-.adminpage-changebuttons {
+.admin-changebuttons {
     display: inline-block;
     margin: auto;
     padding: 10px;
+}
+
+.singleartwork2-wrapper {
+    margin: 80px auto 0 auto;
+    width: 80%;
+}
+
+.singleartwork2-name {
+    text-align: center;
+    padding: 30px;
+    font-size: 32px;
+}
+
+.singleartwork2-image {
+    width: 47%;
+    display: inline-block;
+    vertical-align: top; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.singleartwork2-image img {
+    width: 100%;
+}
+
+.singleartwork2-info {
+    display: inline-block;
+    width: 47%;
+    vertical-align: top; 
+    padding: 20px;
+    font-size: 24px;
 }

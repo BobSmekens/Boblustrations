@@ -21,10 +21,13 @@
 ?>
 
 
-<div class="singleartwork-container">
-    <?php include "singleartworkcard.php" ?>
-</div>
 
+<?php include "singleartworkcard2.php" ?>
+
+<div class="single-artist-art">
+    <div class="single-artist-moreart">More art:</div>
+    <?php include "singleartworkartcard.php" ?>
+</div>
 
 
 
