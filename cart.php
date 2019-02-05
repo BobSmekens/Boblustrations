@@ -14,8 +14,13 @@
 <body>
     <div id="scrolltracker"></div>
 
-    <?php include "php/header.php" ?>
-
+<?php 
+    if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Uber' || $_SESSION['user_type'] == "Admin"){
+        include "php/headerAdmin.php";
+    } else {
+        include "php/header.php"; 
+    } 
+?>
     <div class="whitespace"></div>
     <div class="cart-text">Current items in your personal shopping cart:</div>
     <?php
@@ -57,7 +62,7 @@ $totalpricereturn= $totalprice->fetch(PDO::FETCH_ASSOC);
 
 echo '
         <div class="checkoutbox-property">for a total of<i> $'.$totalpricereturn['total'].'</i></div>
-        <a href="">Checkout</a>
+        <a href="clearCartHandler.php">Checkout</a>
         </div>';
 
 $conn = null;

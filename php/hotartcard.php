@@ -11,9 +11,9 @@
 
 <?php
 $query = 
-"SELECT artwork1.artwork_id, artwork1.artwork_name, artwork1.artwork_url, artwork1.artwork_price, artwork1.artwork_hot, artwork1.artwork_artist, artists.artist_name, artists.artist_id
+"SELECT artwork1.artwork_id, artwork1.artwork_name, artwork1.artwork_url, artwork1.artwork_price, artwork1.artwork_hot, artwork1.artwork_artist, artists1.artist_name, artists1.artist_id
 FROM artwork1
-INNER JOIN artists ON artists.artist_id = artwork1.artwork_artist WHERE artwork_hot = 1 LIMIT 4";
+INNER JOIN artists1 ON artists1.artist_id = artwork1.artwork_artist WHERE artwork_hot = 1 LIMIT 4";
 
 include "db_connection.php";
 $db_result = $conn->query($query);  

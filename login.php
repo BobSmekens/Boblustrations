@@ -13,7 +13,13 @@
 <body>
 <div id="scrolltracker"></div>
 
-<?php include "php/header.php" ?>
+<?php 
+    if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Uber' || $_SESSION['user_type'] == "Admin"){
+        include "php/headerAdmin.php";
+    } else {
+        include "php/header.php"; 
+    } 
+?>
 
 <div class="signup-container">
     <div class="signupform-left">
@@ -23,7 +29,18 @@
             echo    '<div class="signup-title">Logged in as: <br><br>' . $_SESSION['user_email'] .
             '</div><br>' . $_SESSION['user_id']. 
                     '<br><a href="php/logoutHandler.php">Logout</a>';
-        } else {
+        } else if(isset($_SESSION['wrongcredentials'])) {
+            echo  '<div class="signup-title">Wrong username or password.</div>' . 
+            '       <form action="php/loginHandler.php" method="GET">
+            <i class="fab fa-mailchimp"></i>
+            <input type="e-mail" name="client_email" placeholder="E-mail"><br>
+         
+            <i class="fas fa-unlock-alt"></i>
+            <input type="password" name="client_password" Placeholder="Password"><br>
+           
+            <button type="submit">Login</button>
+        </form>';
+        }else {
             echo  '<div class="signup-title">Member login</div>' . 
             '       <form action="php/loginHandler.php" method="GET">
             <i class="fab fa-mailchimp"></i>

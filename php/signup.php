@@ -9,8 +9,13 @@
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|ZCOOL+XiaoWei" rel="stylesheet">
 </head>
 <body>
-<?php include "php/header.php" ?>
-
+<?php 
+    if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Uber' || $_SESSION['user_type'] == "Admin"){
+        include "header2Admin.php";
+    } else {
+        include "header.php"; 
+    } 
+?>
 <div class="signup-container">
 
     <div class="signupform-left debug">

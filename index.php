@@ -20,7 +20,15 @@ session_start() ;
 
 <body>
     <div id="scrolltracker"></div>
-    <?php include "php/header.php"; ?>
+    <?php 
+    
+    if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Uber' || $_SESSION['user_type'] == "Admin"){
+        include "php/headerAdmin.php";
+    } else {
+        include "php/header.php"; 
+    }
+    
+    ?>
 
     <div class="whitespace"></div>
 

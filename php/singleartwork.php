@@ -1,3 +1,5 @@
+<?php session_Start();?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +12,14 @@
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|ZCOOL+XiaoWei" rel="stylesheet">
 </head>
 <body>
-<?php include "header2.php" ?>
+<?php 
+    if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Uber' || $_SESSION['user_type'] == "Admin"){
+        include "header2Admin.php";
+    } else {
+        include "header2.php"; 
+    } 
+?>
+
 
 <div class="singleartwork-container">
     <?php include "singleartworkcard.php" ?>

@@ -14,7 +14,7 @@
 <?php
 $query = 
 "SELECT artist_name, artist_description, artist_url, artist_id
-FROM artists WHERE artist_monthly = 1 LIMIT 1";
+FROM artists1 WHERE artist_monthly = 1 LIMIT 1";
 
 include "db_connection.php";
 $db_result = $conn->query($query);  

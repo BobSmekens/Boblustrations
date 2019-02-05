@@ -16,50 +16,39 @@
 <body>
 <div id="scrolltracker"></div>
 
-<?php include "header2.php" ?>
+<?php
+    if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Uber' || $_SESSION['user_type'] == "Admin"){
+        include "header2Admin.php";
+    } else {
+        include "header2.php"; 
+    }
+?>
 
+<?php 
+if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Uber' || $_SESSION['user_type'] == "Admin") {
+    include "addArtist.php";
+    include "addArtwork.php";
+    
+} else {
+    echo '<div class="no-admin-text"> You are not an admin</div>';
+}
+?>
 
-<div class="admin-form debug">
-    <div class="admin-form-title">Add artist</div>
-    <form action="addArtistHandler.php" method="GET">
-        <input type="text" placeholder="name" name="name"><br>
-        <input type="text" placeholder="artist-bio" name="artist_bio"><br>
-        <select type="text" placeholder="style" name="style">
-            <option value="Drawings">Drawing</option>
-            <option value="Paintings">Painting</option>
-        </select>   <br>
-        <input type="text" placeholder="monthly" name="monthly"><br>
-        <input type="text" placeholder="img url" name="url"><br>
-        <select type="text" placeholder="type" name="type"><br>
-            <option value="Realism">Realism</option>
-            <option value="Abstract">Abstract</option>
-        </select><br>
-        <button type="submit">Submit</button>
-    </form>
+<div class="adminpage-changebuttons debug">
+<?php 
+    include "isNotHot.php";
+    include "isHot.php";
+    include "deleteArtist.php";
+?>
 </div>
 
-<div class="admin-form debug">
-    <div class="admin-form-title">Add artwork</div>
-    <form action="addArtwork1Handler.php" method="GET">
-        <input type="text" placeholder="name" name="name"><br>
-        <input type="text" placeholder="artist-id" name="artist_id"><br>
-        <select type="select" placeholder="style" name="style">
-            <option value="Drawing">Drawings</option>
-            <option value="Painting">Painting</option>
-        </select><br>
-        <input type="text" placeholder="price" name="price"><br>
-        <input type="text" placeholder="img url (fredjourdin1.jpg)" name="url">
-        <br>
-        <select type="select" placeholder="type" name="type">
-            <option value="Realism">Realism</option>
-            <option value="Abstract">Abstract</option>
-        </select><br>
-        <input type="text" placeholder="hot(0 or 1)" name="hot"><br>
-        <button type="submit">Submit</button>
-    </form>
+<div class="adminpage-changebuttons debug">
+<?php   
+    include "isMonthly.php";
+    include "isNotMonthly.php";
+?>
 </div>
 
- 
 </body>
 
 </html>

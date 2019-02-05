@@ -840,12 +840,18 @@ a:hover {
     font-size: 24px;
 }
 
+.adminpage-wrapper {
+    display: flex;
+}
+
 .admin-form {
     height: 300px;
     width: 40%;
     margin: 150px 2% 0 2%;
     display: inline-block;
     vertical-align: top;
+    flex: 1;
+    min-width: 300px;
 }
 
 .admin-form input, .admin-form button, .admin-form select {
@@ -854,4 +860,16 @@ a:hover {
 
 .admin-form-title {
     text-align: center;
+}
+
+.no-admin-text {
+    font-size: 70px;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.adminpage-changebuttons {
+    display: inline-block;
+    margin: auto;
+    padding: 10px;
 }

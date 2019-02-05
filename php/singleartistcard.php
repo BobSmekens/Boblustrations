@@ -5,7 +5,7 @@ $artistname = $_GET['artist_id'];
 
 $query = 
 "SELECT artist_url, artist_description, artist_style, artist_name
-FROM artists
+FROM artists1
 WHERE artist_id = '$artistname'";
 
 include "db_connection.php";
