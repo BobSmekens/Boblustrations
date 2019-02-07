@@ -32,8 +32,6 @@ function filterStyleArt(filter) {
     }
 }
 
-document.getElementById("filterStyleButton").addEventListener(change, filterStyleArt(this.value));
-
 function filterTypeArt(filter) {
     type = filter;
     if (filter == "All") {

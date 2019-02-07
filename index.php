@@ -30,8 +30,6 @@ session_start() ;
     
     ?>
 
-    <div class="whitespace"></div>
-
     <div class="landingpage-slider">
         <button id="btn-left" class="slider-btn" onclick="landingpageSliderMinus()">&#8668</button>
         <button id="btn-right" class="slider-btn" onclick="landingpageSliderPlus()">&#8669</button>
@@ -66,11 +64,9 @@ session_start() ;
         </div>
     </div>
 
-    <div class="footer">
-        <div class="footer-copyright">Copyright &copy Bob Smekens 2019</div>
-    </div>
+<?php include "php/footer.php" ?>
 
-    <script href="js/redirectclick.js"></script>
+<script href="js/redirectclick.js"></script>
 </body>
 
 </html>

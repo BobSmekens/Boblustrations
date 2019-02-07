@@ -6,8 +6,8 @@ SET artwork_hot = 0
 WHERE artwork_name = '$artwork_name'";
 
 include "db_connection.php";
-$conn->query($query);  
+$db_result = $conn->query($query);    
 
 echo $artwork_name . ' is not hot anymore';
-
+$conn = null;
 ?>

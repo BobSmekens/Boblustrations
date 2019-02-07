@@ -2,9 +2,11 @@
 
 $query = "DELETE FROM cart";
 
-include "db_connection.php";
+include "oopattempt.php";
+$connection = new Connection("localhost", "root", "", "boblustrations");
+$connection->init_conn();
 
-$conn->query($query);  
+$connection->conn->query($query);  
 $conn = null;
 
 

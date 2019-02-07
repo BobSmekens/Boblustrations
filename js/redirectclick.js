@@ -1,6 +1,4 @@
-function signupCompleted() {
-    document.getElementById("signup-completed").style.display = "block";
-    alert('registration complete');
-}
 
-       
+function confirmation() {
+    confirm("Are you sure?");  
+}

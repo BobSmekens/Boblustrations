@@ -8,17 +8,20 @@ $query = "SELECT client_name, client_id, client_type
         WHERE client_email = '$user_email'
         AND client_password = '$user_password'" ;     
 
-include "db_connection.php";
+include "oopattempt.php";
+$connection = new Connection("localhost", "root", "", "boblustrations");
+$connection->init_conn();
 
-$db_result = $conn->query($query);
+$db_result = $connection->conn->query($query);  
 
     if ($db_result->rowCount() !== 0 ) {
         echo 'Welcome ' . $user_email;
         $_SESSION['loggedIn'] = true;
         $_SESSION['user_email'] = $user_email;
+        
         foreach ($db_result as $row){
-        $user_id = $row['client_id'];
-        $user_type = $row['client_type'];
+            $user_id = $row['client_id'];
+            $user_type = $row['client_type'];
         };
         $_SESSION['user_id'] = $user_id;
         $_SESSION['user_type'] = $user_type;

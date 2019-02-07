@@ -1,5 +1,4 @@
 <?php
-session_start();
 if(isset($_GET['artwork_style'])) {
     $style = $_GET['artwork_style'];
 }
@@ -52,8 +51,12 @@ if(isset($_GET['artwork_price']) && $price == '61' ){
     INNER JOIN artists1 ON artists1.artist_id = artwork1.artwork_artist";
 }
 
-include "db_connection.php";
-$db_result = $conn->query($query);  
+//include "db_connection.php";
+include "oopattempt.php";
+$connection = new Connection("localhost", "root", "", "boblustrations");
+$connection->init_conn();
+
+$db_result = $connection->conn->query($query);  
     foreach ($db_result as $row)
     {            
     echo    '<div class="hot-art-card" id="artworkcard">

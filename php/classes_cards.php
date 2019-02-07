@@ -50,5 +50,5 @@ class Db_connect {
         }
     }
 }
-
+$conn = null;
 ?>

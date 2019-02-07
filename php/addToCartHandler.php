@@ -15,8 +15,6 @@ VALUES (NULL, $artwork_id, $artwork_price, $client_id)";
 include "db_connection.php";
 
 $conn->query($query);  
-
-
 $conn = null;
 header ('Location: ../artwork.php')
 ?>

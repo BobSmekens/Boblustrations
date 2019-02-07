@@ -6,8 +6,9 @@ SET artist_monthly = 1
 WHERE artist_name = '$artist_name'";
 
 include "db_connection.php";
-$conn->query($query);  
+$db_result = $conn->query($query);  
+
 
 echo $artist_name . ' is monthly artist';
-
+$conn = null;
 ?>

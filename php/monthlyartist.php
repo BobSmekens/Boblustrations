@@ -16,8 +16,9 @@ $query =
 "SELECT artist_name, artist_description, artist_url, artist_id
 FROM artists1 WHERE artist_monthly = 1 LIMIT 1";
 
-include "db_connection.php";
-$db_result = $conn->query($query);  
+$connection->init_conn();
+
+$db_result = $connection->conn->query($query);  
     foreach ($db_result as $row)
     {   
         echo 

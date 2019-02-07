@@ -1,4 +1,4 @@
-<?php session_Start();?>
+
 
 <!DOCTYPE html>
 <html>
@@ -13,7 +13,7 @@
 </head>
 <body>
 <?php 
-    if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Uber' || $_SESSION['user_type'] == "Admin"){
+    if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Uber' ||isset($_SESSION['user_type']) && $_SESSION['user_type'] == "Admin"){
         include "header2Admin.php";
     } else {
         include "header2.php"; 
@@ -29,9 +29,11 @@ INNER JOIN artists1
 ON artwork1.artwork_artist = artists1.artist_id
 WHERE artwork_id = '$artworkid'";
 
-include "db_connection.php";
+include "oopattempt.php";
+$connection = new Connection("localhost", "root", "", "boblustrations");
+$connection->init_conn();
 
-$db_result = $conn->query($query);  
+$db_result = $connection->conn->query($query);  
     foreach ($db_result as $row) {  
 echo '
 <div class="whitespace"></div>
@@ -49,7 +51,7 @@ echo '
     </div>
 </div>';
 }
-
+$conn = null;
 ?>
 
 </body>

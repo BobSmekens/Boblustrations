@@ -12,11 +12,11 @@ if(isset($_GET['artist_name'])) {
     $name = $_GET['artist_name'];
 }
 
-if (isset($_GET['artist_style'])){
+if (isset($_GET['artist_style']) && isset($_GET['artist_type'])){
     $query = 
     "SELECT artist_id, artist_name, artist_description, artist_url, artist_style, artist_type
     FROM artists1
-    WHERE artist_style = '$style'";
+    WHERE artist_style = '$style' AND artist_type = '$type'";
 } else if(isset($_GET['artist_type'])){
     $query =
     "SELECT artist_id, artist_name, artist_description, artist_url, artist_style, artist_type

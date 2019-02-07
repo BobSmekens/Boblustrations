@@ -27,7 +27,7 @@
     <?php 
         if(isset($_SESSION['user_email']) && isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] = true){
             echo    '<div class="signup-title">Logged in as: <br><br>' . $_SESSION['user_email'] .
-            '</div><br>' . $_SESSION['user_id']. 
+            '</div>'. 
                     '<br><a href="php/logoutHandler.php">Logout</a>';
         } else if(isset($_SESSION['wrongcredentials'])) {
             echo  '<div class="signup-title">Wrong username or password.</div>' . 
@@ -65,5 +65,6 @@
 </div>
 
 
+<script href="js/logochange.js"></script>
 </body>
 </html>

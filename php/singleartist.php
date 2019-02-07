@@ -27,6 +27,7 @@
     <?php include "singleartistartcard.php" ?>
         
     </div>
+    <?php include "footer.php" ?>
 
 
 

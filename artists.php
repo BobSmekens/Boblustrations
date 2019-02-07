@@ -22,6 +22,7 @@
 <div class="whitespace"></div>
 
 <div class="artistpage-filter">
+<form action="artists.php" method="GET">
     <label for="style">Artist style: </label>
     <select onchange="filterStyle(this.value)" name="style" class="artistpage-filter-style">
         <option value="All">All</option>
@@ -29,11 +30,13 @@
         <option value="Drawings">Drawings</option>
     </select>
     <label for="style">Artist type: </label>
-    <select onchange="filterType(this.value)" name="style" class="artistpage-filter-style">
+    <select onchange="filterType(this.value)" name="type" class="artistpage-filter-style">
         <option value="All">All</option>
         <option value="Abstract">Abstract</option>
         <option value="Realism">Realism</option>
     </select>
+<!--    <button id="filterbtn" type="submit">search</button>-->
+</form>
 <!--
     <label for="search"> Artist name: </label>
     <input onchange="filterText(this.value)" id="artistpage-search" type="search" name="artistpage_search" placeholder="Search">
@@ -43,6 +46,7 @@
 <div id="cardWrapper">
     <?php //include "php/artistcard.php"; ?>
 </div>
+<?php include "php/footer.php" ?>
 
 <script src="js/filter.js"></script>
 </body>

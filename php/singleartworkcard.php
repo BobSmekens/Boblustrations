@@ -10,9 +10,11 @@ INNER JOIN artists1
 ON artwork1.artwork_artist = artists1.artist_id
 WHERE artwork_id = '$artworkid'";
 
-include "db_connection.php";
+include "oopattempt.php";
+$connection = new Connection("localhost", "root", "", "boblustrations");
+$connection->init_conn();
 
-$db_result = $conn->query($query);  
+$db_result = $connection->conn->query($query);  
     foreach ($db_result as $row) {  
 
 echo '<div class="single-artwork-headline">'.$row['artwork_name'].'</div>

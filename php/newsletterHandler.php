@@ -5,9 +5,11 @@ $query = "INSERT INTO newsletter(newsletter_email)
 VALUES ('$user_email')";
 echo "<script type='text/javascript'>alert('Signup completed');</script>";
 
-include "db_connection.php";
+include "oopattempt.php";
+$connection = new Connection("localhost", "root", "", "boblustrations");
+$connection->init_conn();
 
-$conn->query($query);
+$connection->conn->query($query);  
 
 $conn = null;
 

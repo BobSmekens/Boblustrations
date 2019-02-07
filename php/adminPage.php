@@ -25,23 +25,16 @@
 ?>
 
 <?php 
-
-
 if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Uber' || $_SESSION['user_type'] == "Admin") {
     include "addArtist.php";
     include "addArtwork.php";
     
-    include "isNotHot.php";
-    include "isHot.php";
-    include "deleteArtist.php";
-    include "isMonthly.php";
-    include "isNotMonthly.php";
 } else {
     echo '<div class="no-admin-text"> You are not an admin</div>';
 }
 ?>
 
-
+<script href="../js/redirectclick.js"></script>
 </body>
 
 </html>

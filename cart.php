@@ -22,7 +22,7 @@
     } 
 ?>
     <div class="whitespace"></div>
-    <div class="cart-text">Current items in your personal shopping cart:</div>
+    <div class="cart-text">Items in cart:</div>
     <?php
 
 if(isset($_SESSION['user_id'])){
@@ -34,13 +34,14 @@ FROM clients
 WHERE client_id = '$user_id'";
 
 include "db_connection.php";
-$db_result = $conn->query($query);  
+$db_result = $conn->query($query); 
+ 
 foreach ($db_result as $row)
 {   
 echo '
         <div class="cart-checkoutbox">
-            <div class="checkoutbox-property">Hello there, '.$row['client_name'].'</div>
-            <div class="checkoutbox-property">you have '. $db_result->rowCount() .' items</div>'; 
+            <div class="checkoutbox-property">Hello there, '.$row['client_name'].'</div>'
+          ; 
 }
 $conn = null;
 }
@@ -57,12 +58,13 @@ FROM cart
 WHERE client_id = $user_id";
 
 include "db_connection.php";
+
 $totalprice = $conn->query($query); 
 $totalpricereturn= $totalprice->fetch(PDO::FETCH_ASSOC);
 
 echo '
-        <div class="checkoutbox-property">for a total of<i> $'.$totalpricereturn['total'].'</i></div>
-        <a href="clearCartHandler.php">Checkout</a>
+        <div class="checkoutbox-property">Checkout amount is:<i> $'.$totalpricereturn['total'].'</i></div>
+        <a href="php/checkoutpage.php">Checkout</a>
         </div>';
 
 $conn = null;
@@ -72,7 +74,7 @@ $conn = null;
 if(isset($_SESSION['user_id'])){
 $client_id = $_SESSION['user_id'];
 $query = 
-"SELECT artwork1.artwork_name, artwork1.artwork_price, artists1.artist_name, artwork1.artwork_url
+"SELECT artwork1.artwork_id, cart.artwork_id, artwork1.artwork_id, artwork1.artwork_name, artwork1.artwork_price, artists1.artist_name, artwork1.artwork_url
 FROM cart
 INNER JOIN artwork1
 ON artwork1.artwork_id = cart.artwork_id
@@ -82,8 +84,13 @@ INNER JOIN clients
 ON cart.client_id = clients.client_id
 WHERE clients.client_id = '$client_id'";
 
-include "db_connection.php";
-$db_result = $conn->query($query);  
+include "php/oopattempt.php";
+$connection = new Connection("localhost", "root", "", "boblustrations");
+$connection->init_conn();
+
+$db_result = $connection->conn->query($query);  
+
+
 foreach ($db_result as $row)
 {   
     echo'
@@ -95,7 +102,8 @@ foreach ($db_result as $row)
             <div class="artwork-property">Artwork Name:</div>' . $row['artwork_name'] . '
             <div class="artwork-property">Artist:</div>' . $row['artist_name'] . '
             <div class="artwork-property">Price:</div>$' . $row['artwork_price'] . '
-        </div>
+            <a href="php/removeCartItem.php?artwork_id='.$row['artwork_id'].'">Remove item</a>
+            </div>
     </div>';
 }
 
@@ -105,8 +113,11 @@ $conn = null;
     please log in to use the cart of death
     <div>';
 }
+
 ?>
 
+
 </body>
+<?php include "php/footer.php" ?>
 
 </html>

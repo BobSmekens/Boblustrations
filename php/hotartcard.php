@@ -15,8 +15,11 @@ $query =
 FROM artwork1
 INNER JOIN artists1 ON artists1.artist_id = artwork1.artwork_artist WHERE artwork_hot = 1 LIMIT 4";
 
-include "db_connection.php";
-$db_result = $conn->query($query);  
+include "oopattempt.php";
+$connection = new Connection("localhost", "root", "", "boblustrations");
+$connection->init_conn();
+
+$db_result = $connection->conn->query($query);  
     foreach ($db_result as $row)
     {            
     echo    '<div class="hot-art-card id="hotartcard">

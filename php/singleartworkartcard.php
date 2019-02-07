@@ -1,6 +1,7 @@
 
 
 <?php
+
 $artworkid = $_GET['artwork_id'];
 
 $query = 
@@ -9,9 +10,10 @@ FROM artwork1
 LIMIT 8";
 
 
-include "db_connection.php";
+$connection = new Connection("localhost", "root", "", "boblustrations");
+$connection->init_conn();
 
-$db_result = $conn->query($query);  
+$db_result = $connection->conn->query($query);  
     foreach ($db_result as $row) {  
 
 echo '<div class="single-artist-art-card">
