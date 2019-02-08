@@ -64,7 +64,7 @@ $totalpricereturn= $totalprice->fetch(PDO::FETCH_ASSOC);
 
 echo '
         <div class="checkoutbox-property">Checkout amount is:<i> $'.$totalpricereturn['total'].'</i></div>
-        <a href="php/checkoutpage.php">Checkout</a>
+        <a href="php/clearCartHandler.php">Checkout</a>
         </div>';
 
 $conn = null;
@@ -118,6 +118,6 @@ $conn = null;
 
 
 </body>
-<?php include "php/footer.php" ?>
+
 
 </html>

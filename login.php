@@ -65,6 +65,6 @@
 </div>
 
 
-<script href="js/logochange.js"></script>
+<script src="js/logochange.js"></script>
 </body>
 </html>

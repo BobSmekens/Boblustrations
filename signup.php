@@ -50,7 +50,7 @@
         </div>
     </div>
 
-    <script src="js/redirectclick.js"></script>
+    <script src="js/logochange.js"></script>
 </body>
 
 </html>

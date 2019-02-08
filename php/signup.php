@@ -38,6 +38,6 @@
     </div>
 </div>
 
-
+<script src="js/logochange.js"></script>
 </body>
 </html>
