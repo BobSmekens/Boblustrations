@@ -15,8 +15,12 @@ $query =
 FROM artwork1
 INNER JOIN artists1 ON artists1.artist_id = artwork1.artwork_artist WHERE artwork_hot = 1 LIMIT 4";
 
+$servername = "rdbms.strato.de";
+$username = "U3664325";
+$password = "banaan123!";
+$database = "DB3664325";
 include "oopattempt.php";
-$connection = new Connection("localhost", "root", "", "boblustrations");
+$connection = new Connection("$servername", "$username", "$password", "$database");
 $connection->init_conn();
 
 $db_result = $connection->conn->query($query);  

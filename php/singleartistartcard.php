@@ -9,9 +9,14 @@ $query =
 FROM artwork1
 WHERE artwork_artist = '$artistname'";
 
-$connection = new Connection("localhost", "root", "", "boblustrations");
-$connection->init_conn();
 
+$servername = "rdbms.strato.de";
+$username = "U3664325";
+$password = "banaan123!";
+$database = "DB3664325";
+
+$connection = new Connection("$servername", "$username", "$password", "$database");
+$connection->init_conn();
 $db_result = $connection->conn->query($query);  
     foreach ($db_result as $row) {  
 

@@ -556,7 +556,7 @@ a:hover {
 
 /*                               signup form         */
 .signup-container {
-    margin: 150px auto 0 auto;
+    margin: 100px auto 0 auto;
     display: flex;
     width: 70%;
     -webkit-box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.75);
@@ -857,9 +857,9 @@ a:hover {
 }
 
 .cart-not-loggedin {
-    margin: 200px auto 0 auto;
+    margin: 30px auto 0 auto;
     text-align: center;
-    font-size: 90px;
+    font-size: 56px;
 }
 
 .cart-text {
@@ -1021,4 +1021,14 @@ a:hover {
     margin: 200px auto 0 auto;
     display: block;
     height: 100px;
+}
+
+#cart-logo {
+    border-radius: 50%;
+    animation: rollcart 8s ease infinite;
+}
+
+@keyframes rollcart {
+    0%{transform:translateX(-125vw) rotate(-720deg)}
+    100%{transform:translateX(125vw) rotate(720deg)}
 }

@@ -8,14 +8,17 @@ $query = "SELECT client_name, client_id, client_type
         WHERE client_email = '$user_email'
         AND client_password = '$user_password'" ;     
 
+$servername = "rdbms.strato.de";
+$username = "U3664325";
+$password = "banaan123!";
+$database = "DB3664325";
 include "oopattempt.php";
-$connection = new Connection("localhost", "root", "", "boblustrations");
+$connection = new Connection("$servername", "$username", "$password", "$database");
 $connection->init_conn();
 
 $db_result = $connection->conn->query($query);  
 
     if ($db_result->rowCount() !== 0 ) {
-        echo 'Welcome ' . $user_email;
         $_SESSION['loggedIn'] = true;
         $_SESSION['user_email'] = $user_email;
         

@@ -8,10 +8,13 @@ $query =
 FROM artists1
 WHERE artist_id = '$artistname'";
 
+$servername = "rdbms.strato.de";
+$username = "U3664325";
+$password = "banaan123!";
+$database = "DB3664325";
 include "oopattempt.php";
-$connection = new Connection("localhost", "root", "", "boblustrations");
+$connection = new Connection("$servername", "$username", "$password", "$database");
 $connection->init_conn();
-
 $db_result = $connection->conn->query($query); 
     foreach ($db_result as $row)
     {            

@@ -10,8 +10,11 @@ INNER JOIN artists1
 ON artwork1.artwork_artist = artists1.artist_id
 WHERE artwork_id = '$artworkid'";
 
-include "oopattempt.php";
-$connection = new Connection("localhost", "root", "", "boblustrations");
+$servername = "rdbms.strato.de";
+$username = "U3664325";
+$password = "banaan123!";
+$database = "DB3664325";
+$connection = new Connection("$servername", "$username", "$password", "$database");
 $connection->init_conn();
 
 $db_result = $connection->conn->query($query);  

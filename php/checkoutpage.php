@@ -22,6 +22,14 @@
     } 
 ?>
 
+<div class="checkoutform-box">
+    <form action="checkoutformhandler.php">
+        <input type="text" name="firstname">
+
+    </form>
+
+</div>
+
 <?php
 $client_id = $_SESSION['client_id'];
 

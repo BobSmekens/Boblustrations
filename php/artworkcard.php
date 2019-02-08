@@ -42,7 +42,7 @@ if(isset($_GET['artwork_price']) && $price == '61' ){
     $query =
     "SELECT artwork1.artwork_artist, artwork_url, artists1.artist_id, artists1.artist_name, artwork_name, artwork_price, artwork_type, artwork_id, artwork_style
     FROM artwork1
-    INNER JOIN artists1 ON artists1.artist_id = artwork1.artwork_artist
+    INNER JOIN artists1 ON artists1.artist_id = artwork1.artwork_artist    
     WHERE artwork1.artwork_type = '$type'";
 } else{
     $query = 
@@ -52,8 +52,12 @@ if(isset($_GET['artwork_price']) && $price == '61' ){
 }
 
 //include "db_connection.php";
+$servername = "rdbms.strato.de";
+$username = "U3664325";
+$password = "banaan123!";
+$database = "DB3664325";
 include "oopattempt.php";
-$connection = new Connection("localhost", "root", "", "boblustrations");
+$connection = new Connection("$servername", "$username", "$password", "$database");
 $connection->init_conn();
 
 $db_result = $connection->conn->query($query);  

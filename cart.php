@@ -84,8 +84,12 @@ INNER JOIN clients
 ON cart.client_id = clients.client_id
 WHERE clients.client_id = '$client_id'";
 
-include "php/oopattempt.php";
-$connection = new Connection("localhost", "root", "", "boblustrations");
+$servername = "rdbms.strato.de";
+$username = "U3664325";
+$password = "banaan123!";
+$database = "DB3664325";
+include "oopattempt.php";
+$connection = new Connection("$servername", "$username", "$password", "$database");
 $connection->init_conn();
 
 $db_result = $connection->conn->query($query);  
@@ -110,8 +114,9 @@ foreach ($db_result as $row)
 $conn = null;
 } else {
     echo '<div class="cart-not-loggedin">
-    please log in to use the cart of death
-    <div>';
+    please log in to use the cart(wheel) of death
+    <div>
+    <img id="cart-logo" src="img/illulogo.png" alt="">';
 }
 
 ?>
