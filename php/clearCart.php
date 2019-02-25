@@ -1,4 +1,5 @@
 <?php
+ob_starts();
 session_start();
 $user_id = $_SESSION['user_id'];
 $query = "DELETE FROM cart WHERE client_id = $user_id";

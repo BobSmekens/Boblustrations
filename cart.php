@@ -14,7 +14,7 @@
 <body>
     <div id="scrolltracker"></div>
 
-<?php 
+    <?php 
     if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Uber' || $_SESSION['user_type'] == "Admin"){
         include "php/headerAdmin.php";
     } else {
@@ -64,7 +64,7 @@ $totalpricereturn= $totalprice->fetch(PDO::FETCH_ASSOC);
 
 echo '
         <div class="checkoutbox-property">Checkout amount is:<i> $'.$totalpricereturn['total'].'</i></div>
-        <a href="php/clearCartHandler.php">Checkout</a>
+        <a href="php/clearCartHandler.php">Checkout(only clears cart atm)</a>
         </div>';
 
 $conn = null;
@@ -84,15 +84,9 @@ INNER JOIN clients
 ON cart.client_id = clients.client_id
 WHERE clients.client_id = '$client_id'";
 
-$servername = "rdbms.strato.de";
-$username = "U3664325";
-$password = "banaan123!";
-$database = "DB3664325";
-include "oopattempt.php";
-$connection = new Connection("$servername", "$username", "$password", "$database");
-$connection->init_conn();
+include "db_connection.php";
 
-$db_result = $connection->conn->query($query);  
+$db_result = $conn->query($query);  
 
 
 foreach ($db_result as $row)

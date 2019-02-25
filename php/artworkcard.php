@@ -71,7 +71,7 @@ $db_result = $connection->conn->query($query);
                     <div class="hot-art-artwork">' . $row['artwork_name']. '</div>
                     <div class="hot-art-price">$'. $row['artwork_price'] . '</div>
                     <a class="artworkcard-link" href="php/singleartwork.php?artwork_id=' . $row['artwork_id'] . '">VIEW</a>                    
-                    <a class="artworkcard-cart" href="php/addToCartHandler.php?artwork_id=' . $row['artwork_id']. '&artwork_price=' . $row['artwork_price'] . '"> CART</a>
+                    <a class="artworkcard-cart" href="php/addToCartHandler2.php?artwork_id=' . $row['artwork_id']. '&artwork_price=' . $row['artwork_price'] . '"> CART</a>
                 </div>
             </div>';
     }

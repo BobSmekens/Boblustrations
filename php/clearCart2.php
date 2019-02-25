@@ -1,18 +1,18 @@
 <?php
-$product_id = $_GET['artwork_id'];
+ob_start();
+session_start();
 
-$query = "DELETE FROM cart WHERE artwork_id = '$product_id'";
+$user_id = $_SESSION['user_id'];
+$query = "DELETE FROM cart WHERE client_id = $user_id";
+
 $servername = "rdbms.strato.de";
 $username = "U3664325";
 $password = "banaan123!";
 $database = "DB3664325";
-include "oopattempt.php";
 $connection = new Connection("$servername", "$username", "$password", "$database");
 $connection->init_conn();
 
-$db_result = $connection->conn->query($query);  
-header("Location: ../cart.php");
+$connection->conn->query($query);  
+$conn = null;
+header('location: ../cart.php');
 ?>
-
-
-

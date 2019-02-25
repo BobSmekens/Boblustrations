@@ -28,11 +28,13 @@ FROM artwork1
 INNER JOIN artists1
 ON artwork1.artwork_artist = artists1.artist_id
 WHERE artwork_id = '$artworkid'";
+
 $servername = "rdbms.strato.de";
 $username = "U3664325";
 $password = "banaan123!";
 $database = "DB3664325";
 include "oopattempt.php";
+
 $connection = new Connection("$servername", "$username", "$password", "$database");
 $connection->init_conn();
 
@@ -49,7 +51,7 @@ echo '
             <div class="singleartwork-property">Style:</div><div class="singleartwork-dbproperty">' . $row['artwork_style'] . '</div>
             <div class="singleartwork-property">Type:</div><div class="singleartwork-dbproperty">' . $row['artwork_type'] . '</div>
             <div class="singleartwork-property">Price:</div><div class="singleartwork-dbproperty">$' . $row['artwork_price'] . '</div>
-            <a class="artworkcard-cart" href="addToCartHandler.php?artwork_id=' . $row['artwork_id']. '&artwork_price=' . $row['artwork_price'] . '">ADD TO CART</a>
+            <a class="artworkcard-cart" href="addToCartHandler2.php?artwork_id=' . $row['artwork_id']. '&artwork_price=' . $row['artwork_price'] . '">ADD TO CART</a>
         </div>
     </div>
 </div>';
